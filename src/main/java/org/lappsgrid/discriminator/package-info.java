@@ -1,17 +1,17 @@
-/**
- * Discriminators are used to distinguish between the various types of
- * data that may be passed around in {@link org.lappsgrid.api.Data Data}
- * objects.
- * <p>
- * Discriminators are intended to be an abstract representation of any type 
- * system. Discriminators are represented with 64-bit (long) integer values and
- * the {@link org.lappsgrid.discriminator.DiscriminatorRegistry DiscriminatorRegistry}
- * class is used to map between type (disciminator) names and their long values.
- * <p>
- * It is expected that future versions of the DiscriminatorRegistry will 
- * obtain type information from a more suitable source (e.g. an ontology).
- * 
- * @author Keith Suderman
- * 
+/*-
+ * Copyright 2014 The Language Application Grid
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
  */
 package org.lappsgrid.discriminator;
