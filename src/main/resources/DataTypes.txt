@@ -1,61 +1,63 @@
 # Base types. The ERROR type should always be 0 (zero).
-0: error
-ok
-meta
-text
-xml
-string-list
+0: error ns/error
+ok ns/ok
+meta ns/meta
+text ns/text
+xml ns/xml
+string-list ns/string-list
 
-512: one-per-line text
+512: one-per-line text ns/one-per-line
 
 # Document types.
-bank1: document
-gate document xml
-uima document xml
-stanford document one-per-line
-opennlp document one-per-line
-graf document xml
-ptb document
-json document
-json-ld json
-jsonld json-ld
+bank1: document Document
+gate document xml  ns/gate
+uima document xml ns/uima
+stanford document one-per-line ns/stanford
+opennlp document one-per-line ns/opennlp
+graf document xml ns/graf
+ptb document ns/ptb
+json document ns/json
+json-ld json ns/jsonld
+jsonld json-ld ns/jsonld
 
 # Annotation types.
-bank2: annotation
-chunk annotation
-paragraph chunk
-sentence chunk
-token chunk
-pos annotation
-coref annotation
-ne annotation
-person ne
-location ne
-date ne
-organization ne
-nchunk chunk
-vchunk chunk
-lemma annotation
-lookup annotation
+bank2: annotation Annotation
+chunk annotation Chunk
+paragraph chunk Paragraph
+sentence chunk Sentence
+token chunk Token
+pos annotation Token#pos
+coref annotation Coref
+ne annotation NamedEntity
+person ne Person
+location ne Location
+date ne Date
+organization ne Organization
+nchunk chunk NounChunk
+vchunk chunk VerbChunk
+lemma annotation Token#lemma
+lookup annotation Lookup
 
 # Query types.
-bank3:  query
-get
-index
-list
-lucene query
-sql query
-sparql query
-regex query
-composite
+bank3:  query ns/query
+get ns/query/get
+index ns/query/index
+list ns/query/list
+lucene query ns/query/lucene
+sql query ns/query/sql
+sparql query ns/query/sparql
+regex query ns/query/regex
+composite ns/query/composite
 
 # License types.
-bank512: public-domain
-open-source
-apache2 open-source
-gpl open-source
-lgpl open-source
-bsd open-source
-eclipse open-source
-no-commercial
-restricted
+bank512: public-domain ns/licsense/public-domain
+open-source ns/license/open-source
+apache2 open-source ns/license/apache2
+gpl open-source ns/license/gpl
+lgpl open-source ns/license/lgpl
+bsd open-source ns/license/bsd
+eclipse open-source ns/license/eclipse
+no-commercial ns/license/non-commercial
+restricted ns/license/restricted
+gpl2 gpl ns/licencse/gpl2
+gpl2 gpl ns/license/gpl3

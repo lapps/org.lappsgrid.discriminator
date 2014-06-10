@@ -16,30 +16,35 @@
  */
 package org.lappsgrid.discriminator.core;
 
+import org.lappsgrid.discriminator.Discriminator;
+
 import java.util.*;
 
 public class DiscriminatorImpl implements Discriminator
 {
-   private static final long serialVersionUID = 1L;
+   private static final long serialVersionUID = 2L;
    
    private long id;
    private String name;
+   private String uri;
    private int hashCode;
    private Set<Discriminator> parents;
    
-   protected DiscriminatorImpl(String name, long id)
+   protected DiscriminatorImpl(String name, long id, String uri)
    {
       this.id = id;
       this.name = name;
-      this.hashCode = name.hashCode();
+      this.uri = uri;
+      this.hashCode = uri.hashCode();
       this.parents = new HashSet<Discriminator>();
    }
    
-   public DiscriminatorImpl(String name, Discriminator parent, long id)   
+   public DiscriminatorImpl(String name, Discriminator parent, long id, String uri)
    {
       this.id = id;
       this.name = name;
-      this.hashCode = name.hashCode(); 
+      this.uri = uri;
+      this.hashCode = uri.hashCode();
       this.parents = new HashSet<Discriminator>();
       if (parent != null)
       {
@@ -47,11 +52,12 @@ public class DiscriminatorImpl implements Discriminator
       }
    }
    
-   public DiscriminatorImpl(String name, List<Discriminator> parents, long id)
+   public DiscriminatorImpl(String name, List<Discriminator> parents, long id, String uri)
    {
       this.id = id;
       this.name = name;
-      this.hashCode = name.hashCode();
+      this.uri = uri;
+      this.hashCode = uri.hashCode();
       this.parents = new HashSet<Discriminator>();
       for (Discriminator d : parents)
       {
@@ -59,11 +65,12 @@ public class DiscriminatorImpl implements Discriminator
       }
    }
    
-   public DiscriminatorImpl(String name, Discriminator[] parents, long id)
+   public DiscriminatorImpl(String name, Discriminator[] parents, long id, String uri)
    {
       this.id = id;
       this.name = name;
-      this.hashCode = name.hashCode();
+      this.uri = uri;
+      this.hashCode = uri.hashCode();
       this.parents = new HashSet<Discriminator>();
       for (Discriminator d : parents)
       {
@@ -71,7 +78,9 @@ public class DiscriminatorImpl implements Discriminator
       }
    }
    public long getId() { return id; }
-   
+   public String getName() { return name; }
+   public String getUri() { return uri; }
+
    public boolean isa(Discriminator d)
    {
       if (id  == d.getId())

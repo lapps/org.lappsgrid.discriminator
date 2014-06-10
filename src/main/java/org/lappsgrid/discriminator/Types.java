@@ -80,6 +80,7 @@ public static final  A` long QUERY_LUCENE = get("lucene");
 
    private static long get(String name)
    {
-      return DiscriminatorRegistry.get(name);
+      Discriminator d = DiscriminatorRegistry.getByName(name);
+      return d.getId();
    }
 }
