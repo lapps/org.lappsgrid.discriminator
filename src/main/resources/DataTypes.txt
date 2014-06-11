@@ -58,14 +58,23 @@ bank512: public-domain ns/license/public-domain
 open-source ns/license/open-source
 apache2 open-source ns/license/apache-2.0
 gpl open-source ns/license/gpl
+lgpl open-source ns/license/lgpl
+bsd open-source ns/licanse/bsd
+eclipse open-source ns/license/eclipse
+no-commercial ns/license/non-commercial
+restricted ns/license/restricted
 gpl2 gpl ns/license/gpl-2.0
 gpl3 gpl ns/license/gpl-3.0
-lgpl open-source ns/license/lgpl
 lgpl21 lgpl ns/license/lgpl-2.1
 lgpl3 lgpl ns/license/lgpl-3.0
 bsd2 open-source ns/license/bsd-2-clause
 bsd3 open-source ns/license/bsd-3-clause
 mit open-source ns/license/mit
-eclipse open-source ns/license/eclipse
-no-commercial ns/license/non-commercial
-restricted ns/license/restricted
+
+# Allowed usages
+bank513: research ns/allowedUse/research
+commercial ns/allowedUse/commercial
+education ns/allowedUse/education
+non-profit ns/allowedUse/non-profit
+personal ns/allowedUser/personal
+any commercial non-profit research personal education ns/allowedUse/any
