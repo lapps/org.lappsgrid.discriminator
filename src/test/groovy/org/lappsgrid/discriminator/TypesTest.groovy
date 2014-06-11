@@ -12,11 +12,13 @@ import static java.lang.reflect.Modifier.*
  */
 class TypesTest {
 
+    /** The bit mask for public static final fields. */
+    public static final int PSF = PUBLIC | STATIC | FINAL
+
     def test = { Class<?> type, Field field ->
-        int modifiers = field.modifiers
-        int publicStaticFinal = PUBLIC | STATIC | FINAL
-        return modifiers == (modifiers & publicStaticFinal) && field.type == type
+        return (PSF == (field.modifiers & PSF)) && field.type == type
     }
+
     @Test
     void testURI() {
         println "TypesTest.testURI"
@@ -43,7 +45,7 @@ class TypesTest {
 
         fields.each { typesField ->
             Long type = typesField.get(null)
-            // Get the corresponding fields from the Types class
+            // Get the corresponding fields from the Uri class
             Field uriField = Uri.getDeclaredField(typesField.name)
             String uri = uriField.get(null);
             String shortName = DiscriminatorRegistry.get(type)
@@ -53,7 +55,7 @@ class TypesTest {
         println "Passed."
     }
 
-    @Ignore
+    @Test
     void printAllURI() {
         Uri.getDeclaredFields().findAll { it.type == String }.each {
             println it.get(null)

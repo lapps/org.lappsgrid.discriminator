@@ -2,23 +2,26 @@
 0: error ns/error
 ok ns/ok
 meta ns/meta
-text ns/text
-xml ns/xml
-string-list ns/string-list
+text :text/plain
+xml :application/xml
+string-list :text/plain;separator=space
 
-512: one-per-line text ns/one-per-line
+512: one-per-line text :text/plain;separator=newline
+tsv text :text/plain;separator=tab
+csv text :text/plain;separator=comma
 
 # Document types.
 bank1: document Document
-gate document xml  ns/gate
-uima document xml ns/uima
-stanford document one-per-line ns/stanford
-opennlp document one-per-line ns/opennlp
-graf document xml ns/graf
-ptb document ns/ptb
-json document ns/json
-json-ld json ns/jsonld
-jsonld json-ld ns/jsonld
+gate document xml  :application/xml;schema=gate
+uima document xml :application/xml;schema=uima
+stanford document one-per-line :text/plain;schema=stanford
+opennlp document one-per-line :text/plain;schema=opennlp
+graf document xml :application/xml;schema=graf
+ptb document :text/plain;schema=ptb
+json document :application/json
+json-ld json :application/ld+json
+jsonld json-ld :application/ld+json
+lapps jsonld :application/ld+json;schema=lapps
 
 # Annotation types.
 bank2: annotation Annotation
@@ -50,14 +53,18 @@ regex query ns/query/regex
 composite ns/query/composite
 
 # License types.
-bank512: public-domain ns/licsense/public-domain
+bank512: public-domain ns/license/public-domain
 open-source ns/license/open-source
-apache2 open-source ns/license/apache2
+apache2 open-source ns/license/apache-2.0
 gpl open-source ns/license/gpl
+gpl2 gpl ns/license/gpl-2.0
+gpl3 gpl ns/license/gpl-3.0
 lgpl open-source ns/license/lgpl
-bsd open-source ns/license/bsd
+lgpl21 lgpl ns/license/lgpl-2.1
+lgpl3 lgpl ns/license/lgpl-3.0
+bsd2 open-source ns/license/bsd-2-clause
+bsd3 open-source ns/license/bsd-3-clause
+mit open-source ns/license/mit
 eclipse open-source ns/license/eclipse
 no-commercial ns/license/non-commercial
 restricted ns/license/restricted
-gpl2 gpl ns/licencse/gpl2
-gpl2 gpl ns/license/gpl3

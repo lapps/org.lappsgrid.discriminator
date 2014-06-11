@@ -375,7 +375,11 @@ public class DiscriminatorRegistry
                parents.add(parent);
             }
             String uri = parts[parts.length - 1];
-            if (!uri.startsWith("http"))
+            if (uri.startsWith(":"))
+            {
+               uri = uri.substring(1);
+            }
+            else if (!uri.startsWith("http"))
             {
                uri = "http://vocab.lappsgrid.org/" + uri;
             }

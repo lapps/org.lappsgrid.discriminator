@@ -29,6 +29,9 @@ public class Uri
    public static final String JSON = get("json");
    public static final String JSON_LD = get("json-ld");
    public static final String ONE_PER_LINE = get("one-per-line");
+   public static final String LAPPS = get("lapps");
+   public static final String TSV = get("tsv");
+   public static final String CSV = get("csv");
 
    public static final String TOKEN = get("token");
    public static final String SENTENCE = get("sentence");
