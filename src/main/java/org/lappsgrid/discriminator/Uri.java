@@ -36,7 +36,7 @@ public class Uri
    public static final String TOKEN = get("token");
    public static final String SENTENCE = get("sentence");
    public static final String POS = get("pos");
-   public static final String NAMED_ENTITES = get("ne");
+   public static final String NAMED_ENTITY = get("ne");
    public static final String PERSON = get("person");
    public static final String DATE = get("date");
    public static final String LOCATION = get("location");
@@ -46,6 +46,7 @@ public class Uri
    public static final String COREF = get("coref");
    public static final String LEMMA = get("lemma");
    public static final String LOOKUP = get("lookup");
+   public static final String MATCHES = get("matches");
 
    // Don't allow instances of this class to be created.
    private Uri()

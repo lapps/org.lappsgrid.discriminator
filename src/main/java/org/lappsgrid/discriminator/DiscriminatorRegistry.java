@@ -195,17 +195,24 @@ public class DiscriminatorRegistry
     * by the registry.
     *
     */
-//   static public long[] types()
-//   {
-//      int i = 0;
-//      long[] array = new long[nameIndex.size()];
-//      for (Discriminator d : nameIndex.values())
-//      {
-//         array[i] = d.getId();
-//         ++i;
-//      }
-//      return array;
-//   }
+   static public long[] types()
+   {
+      int i = 0;
+      long[] array = new long[nameIndex.size()];
+      for (Discriminator d : nameIndex.values())
+      {
+         array[i] = d.getId();
+         ++i;
+      }
+      return array;
+   }
+
+   static public String[] names()
+   {
+      List<String> list = new ArrayList<String>(nameIndex.keySet());
+      String[] array = new String[list.size()];
+      return list.toArray(array);
+   }
 
    /**
     * Returns a non-negative number corresponding to the

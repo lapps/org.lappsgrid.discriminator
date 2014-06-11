@@ -40,6 +40,7 @@ nchunk chunk NounChunk
 vchunk chunk VerbChunk
 lemma annotation Token#lemma
 lookup annotation Lookup
+matches annotation NamedEntity#matches
 
 # Query types.
 bank3:  query ns/query
