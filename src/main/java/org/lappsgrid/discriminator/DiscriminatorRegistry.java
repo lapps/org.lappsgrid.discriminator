@@ -228,7 +228,11 @@ public class DiscriminatorRegistry
       Discriminator d = nameIndex.get(name.toLowerCase());
       if (d == null)
       {
-         return -1;
+         d = uriIndex.get(name);
+         if (d == null)
+         {
+            return -1;
+         }
       }
       return d.getId();
    }

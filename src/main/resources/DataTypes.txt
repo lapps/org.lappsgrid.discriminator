@@ -30,7 +30,7 @@ paragraph chunk Paragraph
 sentence chunk Sentence
 token chunk Token
 pos annotation Token#pos
-coref annotation Coref
+coref annotation NamedEntity#matches
 ne annotation NamedEntity
 person ne Person
 location ne Location
@@ -72,9 +72,9 @@ bsd3 open-source ns/license/bsd-3-clause
 mit open-source ns/license/mit
 
 # Allowed usages
-bank513: research ns/allowedUse/research
-commercial ns/allowedUse/commercial
-education ns/allowedUse/education
-non-profit ns/allowedUse/non-profit
-personal ns/allowedUser/personal
-any commercial non-profit research personal education ns/allowedUse/any
+bank513: research ns/allow/research
+commercial ns/allow/commercial
+education ns/allow/education
+non-profit ns/allow/non-profit
+personal ns/allow/personal
+any commercial non-profit research personal education ns/allow/any
