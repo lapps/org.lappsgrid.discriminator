@@ -54,15 +54,16 @@ regex query ns/query/regex
 composite ns/query/composite
 
 # License types.
-bank512: public-domain ns/license/public-domain
-open-source ns/license/open-source
+524287: license ns/license
+bank512: public-domain license ns/license/public-domain
+open-source license ns/license/open-source
 apache2 open-source ns/license/apache-2.0
 gpl open-source ns/license/gpl
 lgpl open-source ns/license/lgpl
 bsd open-source ns/licanse/bsd
 eclipse open-source ns/license/eclipse
-no-commercial ns/license/non-commercial
-restricted ns/license/restricted
+no-commercial license ns/license/non-commercial
+restricted license ns/license/restricted
 gpl2 gpl ns/license/gpl-2.0
 gpl3 gpl ns/license/gpl-3.0
 lgpl21 lgpl ns/license/lgpl-2.1
@@ -72,9 +73,10 @@ bsd3 bsd ns/license/bsd-3-clause
 mit open-source ns/license/mit
 
 # Allowed usages
-bank513: research ns/allow/research
-commercial ns/allow/commercial
-education ns/allow/education
-non-profit ns/allow/non-profit
-personal ns/allow/personal
+525311: usage ns/allow
+bank513: research usage ns/allow/research
+commercial usage ns/allow/commercial
+education usage ns/allow/education
+non-profit usage ns/allow/non-profit
+personal usage ns/allow/personal
 any commercial non-profit research personal education ns/allow/any

@@ -7,7 +7,7 @@ import spock.lang.*
  * @author Keith Suderman
  */
 class RegistryTest extends Specification {
-    String make(String name) {
+    String uri(String name) {
         return "http://vocab.lappsgrid.org/${name}"
     }
 
@@ -17,12 +17,12 @@ class RegistryTest extends Specification {
 
         expect:
             discriminator == expected
-            getUri(discriminator) == make(uri)
-            getUri(name) == make(uri)
+            getUri(discriminator) == uri(value)
+            getUri(name) == uri(value)
             DiscriminatorRegistry.get(discriminator) == name
 
         where:
-            name    | expected | uri
+            name    | expected | value
             "error" | 0        | "ns/error"
             "ok"    | 1        | "ns/ok"
     }
@@ -33,8 +33,8 @@ class RegistryTest extends Specification {
 
         expect:
             DiscriminatorRegistry.get(name) == discriminator
-            getUri(name) == make(expected)
-            getUri(discriminator) == make(expected)
+            getUri(name) == uri(expected)
+            getUri(discriminator) == uri(expected)
 
         where:
             name          | expected
@@ -56,8 +56,8 @@ class RegistryTest extends Specification {
 
         expect:
             DiscriminatorRegistry.get(discriminator) == name
-            getUri(discriminator) == make(expected)
-            getUri(name) == make(expected)
+            getUri(discriminator) == uri(expected)
+            getUri(name) == uri(expected)
 
         where:
             name     | expected
@@ -67,6 +67,16 @@ class RegistryTest extends Specification {
             "lemma"  | "Token#lemma"
     }
 
+    def "test sizes"() {
+        given:
+            int ntypes = DiscriminatorRegistry.types().length
+            int nnames = DiscriminatorRegistry.names().length
+            int ndiscriminators = DiscriminatorRegistry.discriminators().size()
+
+        expect:
+            ntypes == nnames
+            ntypes == ndiscriminators
+    }
     def getUri(long type) {
         Discriminator d = DiscriminatorRegistry.getByType(type)
         if (d == null) {

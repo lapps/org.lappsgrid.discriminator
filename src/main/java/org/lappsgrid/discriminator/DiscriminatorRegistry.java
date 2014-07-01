@@ -215,6 +215,19 @@ public class DiscriminatorRegistry
       return list.toArray(array);
    }
 
+   static public List<Discriminator> discriminators()
+   {
+      List<Discriminator> result = new ArrayList<Discriminator>(nameIndex.values());
+      Comparator<Discriminator> selector = new Comparator<Discriminator>() {
+         @Override
+         public int compare(Discriminator d1, Discriminator d2)
+         {
+            return (int)(d1.getId() - d2.getId());
+         }
+      };
+      Collections.sort(result, selector);
+      return result;
+   }
    /**
     * Returns a non-negative number corresponding to the
     * discriminator value associated with this <code>name</code>.
