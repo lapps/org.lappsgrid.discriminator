@@ -20,8 +20,8 @@ graf document xml :application/xml;schema=graf
 ptb document :text/plain;schema=ptb
 json document :application/json
 json-ld json :application/ld+json
-jsonld json-ld :application/ld+json
-lapps jsonld :application/ld+json;schema=lapps
+#jsonld json-ld :application/ld+json
+lapps json-ld :application/ld+json;schema=lapps
 
 # Annotation types.
 bank2: annotation Annotation
@@ -67,8 +67,8 @@ gpl2 gpl ns/license/gpl-2.0
 gpl3 gpl ns/license/gpl-3.0
 lgpl21 lgpl ns/license/lgpl-2.1
 lgpl3 lgpl ns/license/lgpl-3.0
-bsd2 open-source ns/license/bsd-2-clause
-bsd3 open-source ns/license/bsd-3-clause
+bsd2 bsd ns/license/bsd-2-clause
+bsd3 bsd ns/license/bsd-3-clause
 mit open-source ns/license/mit
 
 # Allowed usages

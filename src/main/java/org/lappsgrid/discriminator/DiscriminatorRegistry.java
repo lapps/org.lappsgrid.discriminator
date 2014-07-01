@@ -204,6 +204,7 @@ public class DiscriminatorRegistry
          array[i] = d.getId();
          ++i;
       }
+      Arrays.sort(array);
       return array;
    }
 
