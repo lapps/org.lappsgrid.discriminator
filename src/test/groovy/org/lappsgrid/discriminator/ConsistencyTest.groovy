@@ -10,34 +10,30 @@ import static org.junit.Assert.*
  */
 class ConsistencyTest {
 
-    @Test
-    void testOriginals() {
+    void runTest(String filename) {
         ClassLoader loader = ConsistencyTest.class.classLoader;
-        String types = loader.getResource("type-list.txt").text
+        String types = loader.getResource(filename).text
         types.eachLine { line ->
-            String[] parts = line.split("\t");
-            assertTrue parts.length == 2
-            long expected = Long.parseLong(parts[0])
-            String name = parts[1]
-            long actual = DiscriminatorRegistry.get(name);
-            String message = "Type id for ${name} has changed. Expected: ${expected} Found: ${actual}"
-            assertTrue message, expected == DiscriminatorRegistry.get(name)
+            if (!line.startsWith('#')) {
+                String[] parts = line.split("\t");
+                assertTrue parts.length == 2
+                long expected = Long.parseLong(parts[0])
+                String name = parts[1]
+                long actual = DiscriminatorRegistry.get(name);
+                String message = "Type id for ${name} has changed. Expected: ${expected} Found: ${actual}"
+                assertTrue message, expected == DiscriminatorRegistry.get(name)
+            }
         }
     }
 
     @Test
+    void testOriginals() {
+        runTest('type-list.txt')
+    }
+
+    @Test
     void test2014_06_11() {
-        ClassLoader loader = ConsistencyTest.class.classLoader;
-        String types = loader.getResource("types-2014-06-11.txt").text
-        types.eachLine { line ->
-            String[] parts = line.split("\t");
-            assertTrue parts.length == 2
-            long expected = Long.parseLong(parts[0])
-            String name = parts[1]
-            long actual = DiscriminatorRegistry.get(name);
-            String message = "Type id for ${name} has changed. Expected: ${expected} Found: ${actual}"
-            assertTrue message, expected == DiscriminatorRegistry.get(name)
-        }
+        runTest("types-2014-06-11.txt")
     }
 
     @Ignore

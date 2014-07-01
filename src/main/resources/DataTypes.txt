@@ -20,8 +20,8 @@ graf document xml :application/xml;schema=graf
 ptb document :text/plain;schema=ptb
 json document :application/json
 json-ld json :application/ld+json
-#jsonld json-ld :application/ld+json
-lapps json-ld :application/ld+json;schema=lapps
+#jsonld json-ld :application/ld+json # was 1033
+1034: lapps json-ld :application/ld+json;schema=lapps
 
 # Annotation types.
 bank2: annotation Annotation

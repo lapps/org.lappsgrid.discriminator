@@ -14,7 +14,7 @@
 1030	ptb
 1031	json
 1032	json-ld
-1033	jsonld
+#1033	jsonld
 2048	annotation
 2049	chunk
 2050	paragraph
