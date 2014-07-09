@@ -46,7 +46,10 @@ public final class Types
    public static final long GRAF = get("graf");
    public static final long JSON = get("json");
    public static final long JSON_LD = get("json-ld");
+   public static final long LAPPS = get("lapps");
    public static final long ONE_PER_LINE = get("one-per-line");
+   public static final long TSV = get("tsv");
+   public static final long CSV = get("csv");
 
    /*
    public static final long GATE_DOCUMENT = get("gate-document");
@@ -63,7 +66,7 @@ public static final  A` long QUERY_LUCENE = get("lucene");
    public static final long TOKEN = get("token");
    public static final long SENTENCE = get("sentence");
    public static final long POS = get("pos");
-   public static final long NAMED_ENTITES = get("ne");
+   public static final long NAMED_ENTITY = get("ne");
    public static final long PERSON = get("person");
    public static final long DATE = get("date");
    public static final long LOCATION = get("location");
@@ -73,6 +76,8 @@ public static final  A` long QUERY_LUCENE = get("lucene");
    public static final long COREF = get("coref");
    public static final long LEMMA = get("lemma");
    public static final long LOOKUP = get("lookup");
+   public static final long MATCHES = get("matches");
+
    // Don't allow instances of this class to be created.
    private Types()
    {
@@ -80,6 +85,7 @@ public static final  A` long QUERY_LUCENE = get("lucene");
 
    private static long get(String name)
    {
-      return DiscriminatorRegistry.get(name);
+      Discriminator d = DiscriminatorRegistry.getByName(name);
+      return d.getId();
    }
 }

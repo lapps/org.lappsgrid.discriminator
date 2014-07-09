@@ -14,9 +14,10 @@
  * limitations under the License.
  *
  */
-package org.lappsgrid.discriminator.core;
+package org.lappsgrid.discriminator;
 
 
+import java.net.*;
 import java.util.Set;
 
 /**
@@ -31,9 +32,11 @@ import java.util.Set;
  * @author Keith Suderman
  *
  */
-public interface Discriminator extends java.io.Serializable
+public interface Discriminator
 {   
    long getId();
+   String getUri();
+   String getName();
    boolean isa(Discriminator discriminator);
    Set<Discriminator> getAncestors();
 }
