@@ -351,7 +351,7 @@ public class DiscriminatorRegistry
       String line = reader.readLine();
       while (line != null)
       {
-//            System.out.println(line);
+//         System.out.println(line);
          line = trim(line);
          if (line.length() == 0)
          {
@@ -363,8 +363,10 @@ public class DiscriminatorRegistry
          {
             //register(parts[0]);
             throw new IOException("Invalid input line: " + line);
-         } else if (parts.length > 1)
+         }
+         else if (parts.length > 1)
          {
+//            System.out.println("Last part is " + parts[parts.length - 1]);
             int start = 0;
             String first = parts[start];
             if (first.endsWith(":"))
@@ -408,6 +410,7 @@ public class DiscriminatorRegistry
             {
                uri = "http://vocab.lappsgrid.org/" + uri;
             }
+//            System.out.println("URI is " + uri);
             register(parts[start], parents, uri);
          }
          line = reader.readLine();
@@ -422,11 +425,11 @@ public class DiscriminatorRegistry
          return "";
       }
 
-      int index = line.indexOf("//");
-      if (index > 0)
-      {
-         return line.substring(0, index).trim();
-      }
+//      int index = line.indexOf("//");
+//      if (index > 0)
+//      {
+//         return line.substring(0, index).trim();
+//      }
       return line.trim();
    }
 

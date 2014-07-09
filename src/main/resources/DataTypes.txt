@@ -1,7 +1,7 @@
 # Base types. The ERROR type should always be 0 (zero).
-0: error ns/error
-ok ns/ok
-meta ns/meta
+0: error http://ns.lappsgrid.org/1.0/error
+ok http://ns.lappsgrid.org/1.0/ok
+meta http://ns.lappsgrid.org/1.0/meta
 text :text/plain
 xml :application/xml
 string-list :text/plain;separator=space
@@ -12,16 +12,16 @@ csv text :text/plain;separator=comma
 
 # Document types.
 bank1: document Document
-gate document xml  :application/xml;schema=gate
-uima document xml :application/xml;schema=uima
-stanford document one-per-line :text/plain;schema=stanford
-opennlp document one-per-line :text/plain;schema=opennlp
-graf document xml :application/xml;schema=graf
-ptb document :text/plain;schema=ptb
+gate document xml  :application/xml;profile=http://gate.ac.uk
+uima document xml :application/xml;profile=http://uima.apache.org
+stanford document one-per-line :text/plain;profile=stanford
+opennlp document one-per-line :text/plain;profile=opennlp
+graf document xml :application/xml;profile=http://graf.tc37sc4.org
+ptb document :text/plain;profile=ptb
 json document :application/json
 json-ld json :application/ld+json
 #jsonld json-ld :application/ld+json # was 1033
-1034: lapps json-ld :application/ld+json;schema=lapps
+1034: lapps json-ld :application/ld+json;profile=http://vocab.lappsgrid.org
 
 # Annotation types.
 bank2: annotation Annotation
@@ -43,40 +43,40 @@ lookup annotation Lookup
 matches annotation NamedEntity#matches
 
 # Query types.
-bank3:  query ns/query
-get ns/query/get
-index ns/query/index
-list ns/query/list
-lucene query ns/query/lucene
-sql query ns/query/sql
-sparql query ns/query/sparql
-regex query ns/query/regex
-composite ns/query/composite
+bank3:  query http://ns.lappsgrid.org/1.0/query
+get http://ns.lappsgrid.org/1.0/query#get
+index http://ns.lappsgrid.org/1.0/query#index
+list http://ns.lappsgrid.org/1.0/query#list
+lucene query http://ns.lappsgrid.org/1.0/query#lucene
+sql query http://ns.lappsgrid.org/1.0/query#sql
+sparql query http://ns.lappsgrid.org/1.0/query#sparql
+regex query http://ns.lappsgrid.org/1.0/query#regex
+composite http://ns.lappsgrid.org/1.0/query#composite
 
 # License types.
-524287: license ns/license
-bank512: public-domain license ns/license/public-domain
-open-source license ns/license/open-source
-apache2 open-source ns/license/apache-2.0
-gpl open-source ns/license/gpl
-lgpl open-source ns/license/lgpl
-bsd open-source ns/licanse/bsd
-eclipse open-source ns/license/eclipse
-no-commercial license ns/license/non-commercial
-restricted license ns/license/restricted
-gpl2 gpl ns/license/gpl-2.0
-gpl3 gpl ns/license/gpl-3.0
-lgpl21 lgpl ns/license/lgpl-2.1
-lgpl3 lgpl ns/license/lgpl-3.0
-bsd2 bsd ns/license/bsd-2-clause
-bsd3 bsd ns/license/bsd-3-clause
-mit open-source ns/license/mit
+524287: license http://ns.lappsgrid.org/1.0/license
+bank512: public-domain license http://ns.lappsgrid.org/1.0/license#public-domain
+open-source license http://ns.lappsgrid.org/1.0/license#open-source
+apache2 open-source http://ns.lappsgrid.org/1.0/license#apache-2.0
+gpl open-source http://ns.lappsgrid.org/1.0/license#gpl
+lgpl open-source http://ns.lappsgrid.org/1.0/license#lgpl
+bsd open-source http://ns.lappsgrid.org/1.0/licanse#bsd
+eclipse open-source http://ns.lappsgrid.org/1.0/license#eclipse
+no-commercial license http://ns.lappsgrid.org/1.0/license#non-commercial
+restricted license http://ns.lappsgrid.org/1.0/license#restricted
+gpl2 gpl http://ns.lappsgrid.org/1.0/license#gpl-2.0
+gpl3 gpl http://ns.lappsgrid.org/1.0/license#gpl-3.0
+lgpl21 lgpl http://ns.lappsgrid.org/1.0/license#lgpl-2.1
+lgpl3 lgpl http://ns.lappsgrid.org/1.0/license#lgpl-3.0
+bsd2 bsd http://ns.lappsgrid.org/1.0/license#bsd-2-clause
+bsd3 bsd http://ns.lappsgrid.org/1.0/license#bsd-3-clause
+mit open-source http://ns.lappsgrid.org/1.0/license#mit
 
 # Allowed usages
-525311: usage ns/allow
-bank513: research usage ns/allow/research
-commercial usage ns/allow/commercial
-education usage ns/allow/education
-non-profit usage ns/allow/non-profit
-personal usage ns/allow/personal
-any commercial non-profit research personal education ns/allow/any
+525311: usage http://ns.lappsgrid.org/1.0/allow
+bank513: research usage http://ns.lappsgrid.org/1.0/allow#research
+commercial usage http://ns.lappsgrid.org/1.0/allow#commercial
+education usage http://ns.lappsgrid.org/1.0/allow#education
+non-profit usage http://ns.lappsgrid.org/1.0/allow#non-profit
+personal usage http://ns.lappsgrid.org/1.0/allow#personal
+any commercial non-profit research personal education http://ns.lappsgrid.org/1.0/allow#any

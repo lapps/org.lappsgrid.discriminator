@@ -87,8 +87,8 @@ class TableMaker {
     }
     public static void make(String filename, Closure selector) {
         StringWriter writer = new StringWriter()
-        writer.println "% WARNING"
-        writer.println "This file is machine generated. Any changes will be lost the next time this file is generated."
+        writer.println "% WARNING: This file is machine generated."
+        writer.println "% Any changes made to this file are likely to be lost."
         makeLatexTable(writer, selector)
         new File(PATH, filename).text = writer.toString()
         println "Wrote $filename"
