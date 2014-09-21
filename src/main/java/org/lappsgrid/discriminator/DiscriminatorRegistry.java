@@ -394,7 +394,8 @@ public class DiscriminatorRegistry
             List<Discriminator> parents = new ArrayList<Discriminator>();
             for (int i = start + 1; i < parts.length - 1; ++i)
             {
-               Discriminator parent = nameIndex.get(parts[i]);
+//					System.out.println("Looking in nameIndex for " + parts[i]);
+					Discriminator parent = nameIndex.get(parts[i]);
                if (parent == null)
                {
                   throw new IOException("Invalid parent type " + parts[i]);

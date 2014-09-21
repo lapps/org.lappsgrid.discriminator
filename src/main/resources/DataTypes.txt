@@ -1,18 +1,20 @@
-# Base types. The ERROR type should always be 0 (zero).
-0: error http://ns.lappsgrid.org/1.0/error
-ok http://ns.lappsgrid.org/1.0/ok
-meta http://ns.lappsgrid.org/1.0/meta
-text :text/plain
-xml :application/xml
-string-list :text/plain;separator=space
+### DO NO EDIT THIS FILE
+### This file is machine generated and any changes are
+### likely to be overwritten by future updates.
+
+0: error  http://ns.lappsgrid.org/1.0/error
+ok  http://ns.lappsgrid.org/1.0/ok
+meta  http://ns.lappsgrid.org/1.0/meta
+text  :text/plain
+xml  :application/xml
+string-list  :text/plain;separator=space
 
 512: one-per-line text :text/plain;separator=newline
 tsv text :text/plain;separator=tab
 csv text :text/plain;separator=comma
 
-# Document types.
-bank1: document Document
-gate document xml  :application/xml;profile=http://gate.ac.uk
+1024: document  http://vocab.lappsgrid.org/Document
+gate document xml :application/xml;profile=http://gate.ac.uk
 uima document xml :application/xml;profile=http://uima.apache.org
 stanford document one-per-line :text/plain;profile=http://nlp.stanford.edu
 opennlp document one-per-line :text/plain;profile=https://opennlp.apache.org
@@ -20,42 +22,39 @@ graf document xml :application/xml;profile=http://graf.tc37sc4.org
 ptb document :text/plain;profile=http://www.cis.upenn.edu/~treebank
 json document :application/json
 json-ld json :application/ld+json
-#jsonld json-ld :application/ld+json # was 1033
+
 1034: lapps json-ld :application/ld+json;profile=http://schema.lappsgrid.org/lif/1.0
 
-# Annotation types.
-bank2: annotation Annotation
-chunk annotation Chunk
-paragraph chunk Paragraph
-sentence chunk Sentence
-token chunk Token
-pos annotation Token#pos
-coref annotation NamedEntity#matches
-ne annotation NamedEntity
-person ne Person
-location ne Location
-date ne Date
-organization ne Organization
-nchunk chunk NounChunk
-vchunk chunk VerbChunk
-lemma annotation Token#lemma
-lookup annotation Lookup
-matches annotation NamedEntity#matches
+2048: annotation  http://vocab.lappsgrid.org/Annotation
+chunk annotation http://vocab.lappsgrid.org/Chunk
+paragraph chunk http://vocab.lappsgrid.org/Paragraph
+sentence chunk http://vocab.lappsgrid.org/Sentence
+token chunk http://vocab.lappsgrid.org/Token
+pos annotation http://vocab.lappsgrid.org/Token#pos
+coref annotation http://vocab.lappsgrid.org/NamedEntity#matches
+ne annotation http://vocab.lappsgrid.org/NamedEntity
+person ne http://vocab.lappsgrid.org/Person
+location ne http://vocab.lappsgrid.org/Location
+date ne http://vocab.lappsgrid.org/Date
+organization ne http://vocab.lappsgrid.org/Organization
+nchunk chunk http://vocab.lappsgrid.org/NounChunk
+vchunk chunk http://vocab.lappsgrid.org/VerbChunk
+lemma annotation http://vocab.lappsgrid.org/Token#lemma
+lookup annotation http://vocab.lappsgrid.org/Lookup
+matches annotation http://vocab.lappsgrid.org/NamedEntity#matches
 
-# Query types.
-bank3:  query http://ns.lappsgrid.org/1.0/query
-get http://ns.lappsgrid.org/1.0/query#get
-index http://ns.lappsgrid.org/1.0/query#index
-list http://ns.lappsgrid.org/1.0/query#list
+3072: query  http://ns.lappsgrid.org/1.0/query
+get  http://ns.lappsgrid.org/1.0/query#get
+index  http://ns.lappsgrid.org/1.0/query#index
+list  http://ns.lappsgrid.org/1.0/query#list
 lucene query http://ns.lappsgrid.org/1.0/query#lucene
 sql query http://ns.lappsgrid.org/1.0/query#sql
 sparql query http://ns.lappsgrid.org/1.0/query#sparql
 regex query http://ns.lappsgrid.org/1.0/query#regex
-composite http://ns.lappsgrid.org/1.0/query#composite
+composite query http://ns.lappsgrid.org/1.0/query#composite
 
-# License types.
-524287: license http://ns.lappsgrid.org/1.0/license
-bank512: public-domain license http://ns.lappsgrid.org/1.0/license#public-domain
+524287: license  http://ns.lappsgrid.org/1.0/license
+public-domain license http://ns.lappsgrid.org/1.0/license#public-domain
 open-source license http://ns.lappsgrid.org/1.0/license#open-source
 apache2 open-source http://ns.lappsgrid.org/1.0/license#apache-2.0
 gpl open-source http://ns.lappsgrid.org/1.0/license#gpl
@@ -72,11 +71,10 @@ bsd2 bsd http://ns.lappsgrid.org/1.0/license#bsd-2-clause
 bsd3 bsd http://ns.lappsgrid.org/1.0/license#bsd-3-clause
 mit open-source http://ns.lappsgrid.org/1.0/license#mit
 
-# Allowed usages
-525311: usage http://ns.lappsgrid.org/1.0/allow
-bank513: research usage http://ns.lappsgrid.org/1.0/allow#research
+525311: usage  http://ns.lappsgrid.org/1.0/allow
+research usage http://ns.lappsgrid.org/1.0/allow#research
 commercial usage http://ns.lappsgrid.org/1.0/allow#commercial
 education usage http://ns.lappsgrid.org/1.0/allow#education
 non-profit usage http://ns.lappsgrid.org/1.0/allow#non-profit
 personal usage http://ns.lappsgrid.org/1.0/allow#personal
-any commercial non-profit research personal education http://ns.lappsgrid.org/1.0/allow#any
+any research commercial education non-profit personal http://ns.lappsgrid.org/1.0/allow#any

@@ -16,6 +16,7 @@ class ConsistencyTest {
         String types = loader.getResource(filename).text
         types.eachLine { line ->
             if (!line.startsWith('#')) {
+//                println line
                 String[] parts = line.split("\t");
                 assertTrue parts.length == 2
                 long expected = Long.parseLong(parts[0])
@@ -29,16 +30,21 @@ class ConsistencyTest {
 
     @Test
     void testOriginals() {
+        println "ConsistencyTest.testOriginals"
         runTest('type-list.txt')
+        println "Done"
     }
 
     @Test
     void test2014_06_11() {
+        println "ConsistencyTest.test2014_06_11"
         runTest("types-2014-06-11.txt")
+        println "Done"
     }
 
     @Test
     void test2014_09_20() {
+        println "ConsistencyTest.test2014_09_20"
         ClassLoader loader = ConsistencyTest.class.classLoader;
         String types = loader.getResource('types-2014-09-20.txt')?.text
         assertNotNull types
@@ -50,19 +56,29 @@ class ConsistencyTest {
 
             int index = 2
             if (parts.length > 3) {
-                Set<String> ancestors = parts[2..-2] as Set<String>
-                int expectedSize = discriminator.ancestors.size()
-                int actual = ancestors.size()
-                assertTrue "expected ${expectedSize} found ${actual}", expectedSize == actual
-                List<String> expected = discriminator.ancestors.collect { it.name }
-                assertTrue ancestors.containsAll(expected)
-                assertTrue expected.containsAll(ancestors)
+                List<String> expected = parts[2..-2] as List<String>
+                int expectedSize = expected.size()
+                int actualSize = discriminator.ancestors.size()
+                assertTrue "expected ${expectedSize} found ${actualSize}", expectedSize == actualSize
+                List<String> found = discriminator.ancestors.collect { it.name }
+                if (!expected.containsAll(found)) {
+                    println "Assertion failed on: " + line
+                    println "Expected"
+                    println expected.join(', ')
+                    println "Found"
+                    println found.join(', ')
+                    fail()
+                }
+//                assertTrue ancestors.containsAll(expected)
+//                assertTrue expected.containsAll(ancestors)
             }
             else {
                 assertTrue discriminator.ancestors.isEmpty()
             }
-            assertTrue normalize(parts[-1]) == normalize(discriminator.uri)
+            String message = "${line}\nExpected ${parts[-1]} Found ${discriminator.uri}"
+            assertTrue message, normalize(parts[-1]) == normalize(discriminator.uri)
         }
+        println "Done"
     }
 
     String normalize(String input) {

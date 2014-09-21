@@ -42,7 +42,7 @@
 3077 sql query http://ns.lappsgrid.org/1.0/query#sql
 3078 sparql query http://ns.lappsgrid.org/1.0/query#sparql
 3079 regex query http://ns.lappsgrid.org/1.0/query#regex
-3080 composite  http://ns.lappsgrid.org/1.0/query#composite
+3080 composite query http://ns.lappsgrid.org/1.0/query#composite
 524287 license  http://ns.lappsgrid.org/1.0/license
 524288 public-domain license http://ns.lappsgrid.org/1.0/license#public-domain
 524289 open-source license http://ns.lappsgrid.org/1.0/license#open-source
