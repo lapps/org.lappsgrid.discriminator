@@ -7,6 +7,26 @@ import spock.lang.*
  * @author Keith Suderman
  */
 class RegistryTest extends Specification {
+    def "test one-per-line ancestors"() {
+        given:
+            Discriminator d = DiscriminatorRegistry.getByName('one-per-line')
+
+        expect:
+            d != null
+            d.ancestors != null
+            d.ancestors.size() > 0
+    }
+
+    def "test tsv ancestors"() {
+        given:
+            Discriminator d = DiscriminatorRegistry.getByName('tsv')
+
+        expect:
+            d != null
+            d.ancestors != null
+            d.ancestors.size() > 0
+    }
+
     def "error code tests"() {
         given:
             long discriminator = DiscriminatorRegistry.get(name)

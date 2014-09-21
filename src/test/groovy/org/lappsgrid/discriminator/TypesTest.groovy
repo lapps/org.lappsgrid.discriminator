@@ -56,6 +56,14 @@ class TypesTest {
     }
 
     @Test
+    void testAncestors() {
+        Discriminator type = DiscriminatorRegistry.getByName('one-per-line')
+        assertNotNull type
+        assertTrue type.ancestors.size() == 1
+        println type.ancestors[0].name
+    }
+
+    @Ignore
     void printAllURI() {
         Uri.getDeclaredFields().findAll { it.type == String }.each {
             println it.get(null)

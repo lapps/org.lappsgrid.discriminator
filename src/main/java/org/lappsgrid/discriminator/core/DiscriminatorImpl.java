@@ -38,7 +38,16 @@ public class DiscriminatorImpl implements Discriminator
       this.hashCode = uri.hashCode();
       this.parents = new HashSet<Discriminator>();
    }
-   
+
+   public DiscriminatorImpl(Discriminator discriminator)
+   {
+      this.id = discriminator.getId();
+      this.name = discriminator.getName();
+      this.uri = discriminator.getUri();
+      this.hashCode = this.uri.hashCode();
+      this.parents = discriminator.getAncestors();
+   }
+
    public DiscriminatorImpl(String name, Discriminator parent, long id, String uri)
    {
       this.id = id;

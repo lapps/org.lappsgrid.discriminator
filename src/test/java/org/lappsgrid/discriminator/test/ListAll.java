@@ -1,5 +1,6 @@
 package org.lappsgrid.discriminator.test;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.lappsgrid.discriminator.DiscriminatorRegistry;
 
@@ -15,7 +16,7 @@ public class ListAll
 
    }
 
-   @Test
+   @Ignore
    public void listAll()
    {
       long[] types = DiscriminatorRegistry.types();

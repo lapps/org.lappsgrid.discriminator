@@ -27,7 +27,7 @@ class TableMaker {
 """
         discriminators.each { discriminator ->
 //            Discriminator discriminator = DiscriminatorRegistry.getByType(id)
-            String uri = discriminator.uri.replace("#", "\\#")
+            String uri = discriminator.uri.replace("#", "\\#").replace("~", "\\texttildelow{}")
             writer.println "${discriminator.id} & ${discriminator.name} & ${uri} & ${getAncestors(discriminator)} \\\\ \\hline"
         }
         writer.println "\\end{longtable}"
