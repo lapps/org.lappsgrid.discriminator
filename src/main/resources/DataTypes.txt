@@ -44,9 +44,9 @@ lookup annotation http://vocab.lappsgrid.org/Lookup
 matches annotation http://vocab.lappsgrid.org/NamedEntity#matches
 
 3072: query  http://ns.lappsgrid.org/1.0/query
-get  http://ns.lappsgrid.org/1.0/query#get
-index  http://ns.lappsgrid.org/1.0/query#index
-list  http://ns.lappsgrid.org/1.0/query#list
+get  http://ns.lappsgrid.org/1.0/get
+index  http://ns.lappsgrid.org/1.0/index
+list  http://ns.lappsgrid.org/1.0/list
 lucene query http://ns.lappsgrid.org/1.0/query#lucene
 sql query http://ns.lappsgrid.org/1.0/query#sql
 sparql query http://ns.lappsgrid.org/1.0/query#sparql
