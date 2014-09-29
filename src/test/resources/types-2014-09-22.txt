@@ -35,9 +35,9 @@
 2063 lookup annotation http://vocab.lappsgrid.org/Lookup
 2064 matches annotation http://vocab.lappsgrid.org/NamedEntity#matches
 3072 query  http://ns.lappsgrid.org/1.0/query
-3073 get  http://ns.lappsgrid.org/1.0/query#get
-3074 index  http://ns.lappsgrid.org/1.0/query#index
-3075 list  http://ns.lappsgrid.org/1.0/query#list
+3073 get  http://ns.lappsgrid.org/1.0/get
+3074 index  http://ns.lappsgrid.org/1.0/index
+3075 list  http://ns.lappsgrid.org/1.0/list
 3076 lucene query http://ns.lappsgrid.org/1.0/query#lucene
 3077 sql query http://ns.lappsgrid.org/1.0/query#sql
 3078 sparql query http://ns.lappsgrid.org/1.0/query#sparql

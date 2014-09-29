@@ -70,6 +70,13 @@ lgpl3 lgpl http://ns.lappsgrid.org/1.0/license#lgpl-3.0
 bsd2 bsd http://ns.lappsgrid.org/1.0/license#bsd-2-clause
 bsd3 bsd http://ns.lappsgrid.org/1.0/license#bsd-3-clause
 mit open-source http://ns.lappsgrid.org/1.0/license#mit
+cc license http://ns.lappsgrid.org/1.0/license#cc
+cc-by cc http://ns.lappsgrid.org/1.0/license#cc-by
+cc-by-sa cc-by http://ns.lappsgrid.org/1.0/license#cc-by-sa
+cc-by-nd cc-by http://ns.lappsgrid.org/1.0/license#cc-by-nd
+cc-by-nc cc-by http://ns.lappsgrid.org/1.0/license#cc-by-nc
+cc-by-nc-sa cc-by-sa cc-by-nc http://ns.lappsgrid.org/1.0/license#cc-by-nc-sa
+cc-by-nc-nd cc-by-nc cc-by-nd http://ns.lappsgrid.org/1.0/license#cc-by-nc-nd
 
 525311: usage  http://ns.lappsgrid.org/1.0/allow
 research usage http://ns.lappsgrid.org/1.0/allow#research

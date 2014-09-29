@@ -46,7 +46,7 @@ class ConsistencyTest {
     void test2014_09_20() {
         println "ConsistencyTest.test2014_09_20"
         ClassLoader loader = ConsistencyTest.class.classLoader;
-        String types = loader.getResource('types-2014-09-20.txt')?.text
+        String types = loader.getResource('types-2014-09-22.txt')?.text
         assertNotNull types
         types.eachLine { line ->
             String[] parts = line.split("\\s+");
@@ -95,7 +95,7 @@ class ConsistencyTest {
         }
     }
 
-    // Used to generate the types-2014-09-20.txt file.
+    // Used to generate the types-2014-09-22.txt file.
     @Ignore
     void printDiscriminatorList() {
         List<Discriminator> discriminators = DiscriminatorRegistry.discriminators()
