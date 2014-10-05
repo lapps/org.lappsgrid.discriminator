@@ -3,10 +3,15 @@ package org.lappsgrid.discriminator;
 import org.lappsgrid.api.*;
 
 /**
+ * Helper methods to get Discriminator values from Data objects.
+ *
  * @author Keith Suderman
  */
 public final class Helpers
 {
+	/**
+	 * Returns the integer identifier for the Data object's discriminator.
+	 */
    public static long type(Data data)
    {
       Discriminator d = DiscriminatorRegistry.getByUri(data.getDiscriminator());
@@ -17,6 +22,9 @@ public final class Helpers
       return d.getId();
    }
 
+	/**
+	 *  Returns the URI for the Data object's discriminator.
+	 */
    public static String uri(Data data)
    {
       Discriminator d = DiscriminatorRegistry.getByUri(data.getDiscriminator());
@@ -27,6 +35,9 @@ public final class Helpers
       return d.getUri();
    }
 
+	/**
+	 * Returns the short name for the Data object's discriminator.
+	 */
    public static String name(Data data)
    {
       Discriminator d = DiscriminatorRegistry.getByUri(data.getDiscriminator());

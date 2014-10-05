@@ -29,21 +29,17 @@ import org.lappsgrid.discriminator.core.DiscriminatorImpl;
 
 /**
  * The DiscriminatorRegistry serves as the source of all
- * knowledge (SOAK) for {@link Discriminator} objects.
- * <p/>
- * Discriminator objects are never exposed directly to users.
- * Instead the <code>DiscriminatorRegistry</code> class is used to
- * map discriminator names to long values, and vice-versa.
- * <p/>
+ * knowledge for {@link Discriminator} objects.
+ * <p>
+ * The DiscriminatorRegistry class is used to map between a Discriminator's
+ * integer identifier, its short name, and its URI.
+ * <p>
  * This class is subject to change as needs evolve.
  *
  * @author Keith Suderman
  */
 public class DiscriminatorRegistry
 {
-//   static private ReentrantReadWriteLock lock = new ReentrantReadWriteLock();
-//   static private boolean initialized = false;
-
    static private long nextId = 0;
    static private Map<String, Discriminator> nameIndex = new HashMap<String, Discriminator>();
    static private Map<String, Discriminator> uriIndex = new HashMap<String, Discriminator>();
