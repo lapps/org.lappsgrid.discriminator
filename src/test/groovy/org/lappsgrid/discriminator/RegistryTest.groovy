@@ -94,7 +94,7 @@ class RegistryTest extends Specification {
     }
 
     def uri(String name) {
-        return "http://ns.lappsgrid.org/1.0/${name}"
+        return "http://vocab.lappsgrid.org/ns/${name}"
     }
     def vocab(String name) {
         return "http://vocab.lappsgrid.org/${name}"
