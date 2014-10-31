@@ -9,6 +9,10 @@ text  http://vocab.lappsgrid.org/ns/media/text
 xml  http://vocab.lappsgrid.org/ns/media/xml
 string-list  http://vocab.lappsgrid.org/ns/media/text#space-separated
 
+128: system  http://vocab.lappsgrid.org/ns/system
+login system http://vocab.lappsgrid.org/ns/system#login
+authorization system http://vocab.lappsgrid.org/ns/system#authorization
+
 512: one-per-line text http://vocab.lappsgrid.org/ns/media/text#newline-separated
 tsv text http://vocab.lappsgrid.org/ns/media/text#tab-separated
 csv text http://vocab.lappsgrid.org/ns/media/text#comma-separated

@@ -58,6 +58,7 @@ public class DiscriminatorRegistry
       {
          // TODO This exception should be logged.
          e.printStackTrace();
+			throw new RuntimeException(e);
       }
    }
 

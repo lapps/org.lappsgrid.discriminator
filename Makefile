@@ -1,3 +1,4 @@
+PAGES=../org.lappsgrid.discriminator.pages
 
 help:
 	@echo "GOALS"
@@ -17,7 +18,8 @@ deploy:
 	mvn javadoc:jar source:jar deploy
 	
 site:
+	cd $(PAGES) ; git checkout gh-pages ; git pull
 	mvn site
-	cp target/site ../org.lappsgrid.discriminator.pages
-	cd ../org.lappsgrid.discriminator.pages; commit "Updated Maven site." ; push
-	
+	cp target/site $(PAGES)
+	cd $(PAGES) ; commit "Updated Maven site." ; push	
+
