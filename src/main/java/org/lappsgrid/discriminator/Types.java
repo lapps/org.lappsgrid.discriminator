@@ -34,6 +34,7 @@ public final class Types
 
    public static final long LIST = get("list");
    public static final long GET = get("get");
+   public static final long SIZE = get("size");
    public static final long REGEX = get("regex");
    public static final long COMPOSITE = get("composite");
 

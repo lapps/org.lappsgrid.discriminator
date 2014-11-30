@@ -18,6 +18,7 @@ public class Uri
 
    public static final String LIST = get("list");
    public static final String GET = get("get");
+   public static final String SIZE = get("size");
    public static final String REGEX = get("regex");
    public static final String COMPOSITE = get("composite");
 
