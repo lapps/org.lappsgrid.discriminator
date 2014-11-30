@@ -3,6 +3,7 @@ package org.lappsgrid.discriminator;
 /**
  * Static final definitions of the URI of the most commonly used discriminators.
  *
+ * @deprecated Use the values defined in the {@link org.lappsgrid.discriminator.Constants Constants} class.
  * @author Keith Suderman
  */
 public class Uri

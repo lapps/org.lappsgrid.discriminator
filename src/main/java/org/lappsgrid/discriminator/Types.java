@@ -19,6 +19,7 @@ package org.lappsgrid.discriminator;
 /**
  * Static final definitions of the most commonly used discriminator types.
  *
+ * @deprecated Use the values defined in the {@link org.lappsgrid.discriminator.Constants Constants} class.
  * @author Keith Suderman
  */
 public final class Types
