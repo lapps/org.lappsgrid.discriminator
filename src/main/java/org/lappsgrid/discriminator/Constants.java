@@ -64,6 +64,8 @@ public class Constants
        public static final long REGEX = 3079;
        public static final long COMPOSITE = 3080;
        public static final long SIZE = 3081;
+       public static final long GETMETADATA = 3082;
+       public static final long EXECUTE = 3083;
        public static final long LICENSE = 524287;
        public static final long PUBLIC_DOMAIN = 524288;
        public static final long OPEN_SOURCE = 524289;
@@ -151,6 +153,8 @@ public class Constants
        public static final String REGEX = "http://vocab.lappsgrid.org/ns/query#regex"; 
        public static final String COMPOSITE = "http://vocab.lappsgrid.org/ns/query#composite"; 
        public static final String SIZE = "http://vocab.lappsgrid.org/ns/size"; 
+       public static final String GETMETADATA = "http://vocab.lappsgrid.org/ns/get-metadata"; 
+       public static final String EXECUTE = "http://vocab.lappsgrid.org/ns/execute"; 
        public static final String LICENSE = "http://vocab.lappsgrid.org/ns/license"; 
        public static final String PUBLIC_DOMAIN = "http://vocab.lappsgrid.org/ns/license#public-domain"; 
        public static final String OPEN_SOURCE = "http://vocab.lappsgrid.org/ns/license#open-source"; 
