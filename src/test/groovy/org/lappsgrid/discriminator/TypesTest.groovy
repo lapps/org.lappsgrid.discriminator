@@ -23,13 +23,14 @@ class TypesTest {
     void testURI() {
         println "TypesTest.testURI"
         def uriTest = test.curry(String.class)
-        def fields = Uri.getDeclaredFields().findAll {uriTest it}
+//        def fields = Uri.getDeclaredFields().findAll {uriTest it}
+        def fields = Constants.Uri.getDeclaredFields().findAll { uriTest it }
 
         fields.each { uriField ->
             String uri = uriField.get(null)
             // Get the corresponding fields from the Types class
 //            Field typesField = Types.getDeclaredField(uriField.name)
-            Field typesField = Constants.Uri.getDeclaredField(uriField.name)
+            Field typesField = Constants.Values.getDeclaredField(uriField.name)
             long type = typesField.get(null);
             String shortName = DiscriminatorRegistry.get(type)
             assertTrue uri == DiscriminatorRegistry.getUri(type)
