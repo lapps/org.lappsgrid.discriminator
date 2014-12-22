@@ -28,7 +28,8 @@ class TypesTest {
         fields.each { uriField ->
             String uri = uriField.get(null)
             // Get the corresponding fields from the Types class
-            Field typesField = Types.getDeclaredField(uriField.name)
+//            Field typesField = Types.getDeclaredField(uriField.name)
+            Field typesField = Constants.Uri.getDeclaredField(uriField.name)
             long type = typesField.get(null);
             String shortName = DiscriminatorRegistry.get(type)
             assertTrue uri == DiscriminatorRegistry.getUri(type)
@@ -46,7 +47,8 @@ class TypesTest {
         fields.each { typesField ->
             Long type = typesField.get(null)
             // Get the corresponding fields from the Uri class
-            Field uriField = Uri.getDeclaredField(typesField.name)
+//            Field uriField = Uri.getDeclaredField(typesField.name)
+            Field uriField = Constants.Uri.getField(typesField.name)
             String uri = uriField.get(null);
             String shortName = DiscriminatorRegistry.get(type)
             assertTrue uri == DiscriminatorRegistry.getUri(type)

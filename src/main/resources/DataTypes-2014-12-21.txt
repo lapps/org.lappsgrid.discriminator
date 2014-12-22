@@ -59,8 +59,6 @@ composite query http://vocab.lappsgrid.org/ns/query#composite
 size query http://vocab.lappsgrid.org/ns/size
 getMetadata query http://vocab.lappsgrid.org/ns/get-metadata
 execute query http://vocab.lappsgrid.org/ns/execute
-solr query http://vocab.lappsgrid.org/ns/query#solr
-schema solr http://vocab.lappsgrid.org/ns/query#solr-schema
 
 524287: license  http://vocab.lappsgrid.org/ns/license
 public-domain license http://vocab.lappsgrid.org/ns/license#public-domain
