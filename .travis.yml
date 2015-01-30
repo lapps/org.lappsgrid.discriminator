@@ -1,0 +1,6 @@
+language: java
+branches:
+    only:
+        - master
+        - develop
+        - feature/v2.0.0
