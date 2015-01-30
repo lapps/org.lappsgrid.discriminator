@@ -7,7 +7,7 @@ ok  http://vocab.lappsgrid.org/ns/ok
 meta  http://vocab.lappsgrid.org/ns/meta
 text  http://vocab.lappsgrid.org/ns/media/text
 xml  http://vocab.lappsgrid.org/ns/media/xml
-string-list  http://vocab.lappsgrid.org/ns/media/text#space-separated
+string-list text http://vocab.lappsgrid.org/ns/string-list
 
 128: system  http://vocab.lappsgrid.org/ns/system
 login system http://vocab.lappsgrid.org/ns/system#login
@@ -16,6 +16,7 @@ authorization system http://vocab.lappsgrid.org/ns/system#authorization
 512: one-per-line text http://vocab.lappsgrid.org/ns/media/text#newline-separated
 tsv text http://vocab.lappsgrid.org/ns/media/text#tab-separated
 csv text http://vocab.lappsgrid.org/ns/media/text#comma-separated
+space-separated  http://vocab.lappsgrid.org/ns/media/text#space-separated
 
 1024: document  http://vocab.lappsgrid.org/Document
 gate document xml http://vocab.lappsgrid.org/ns/media/xml#gate

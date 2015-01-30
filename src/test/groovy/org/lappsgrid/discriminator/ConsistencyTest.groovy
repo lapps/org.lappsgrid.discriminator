@@ -9,6 +9,7 @@ import static org.junit.Assert.*
  * 
  * @author Keith Suderman
  */
+@Ignore
 class ConsistencyTest {
 
     void runTest(String filename) {

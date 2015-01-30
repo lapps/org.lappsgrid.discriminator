@@ -268,12 +268,20 @@ public class DiscriminatorRegistry
       Discriminator d = nameIndex.get(name);
       if (d == null)
       {
-         return false;
+         d = uriIndex.get(name);
+         if (d == null)
+         {
+            return false;
+         }
       }
       Discriminator parent = nameIndex.get(parentName);
       if (parent == null)
       {
-         return false;
+         parent = uriIndex.get(parentName);
+         if (parent == null)
+         {
+            return false;
+         }
       }
 
       return d.isa(parent);

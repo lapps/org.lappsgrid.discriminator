@@ -27,6 +27,7 @@ public class Constants
        public static final long ONE_PER_LINE = 512;
        public static final long TSV = 513;
        public static final long CSV = 514;
+       public static final long SPACE_SEPARATED = 515;
        public static final long DOCUMENT = 1024;
        public static final long GATE = 1025;
        public static final long UIMA = 1026;
@@ -111,13 +112,14 @@ public class Constants
        public static final String META = "http://vocab.lappsgrid.org/ns/meta"; 
        public static final String TEXT = "http://vocab.lappsgrid.org/ns/media/text"; 
        public static final String XML = "http://vocab.lappsgrid.org/ns/media/xml"; 
-       public static final String STRING_LIST = "http://vocab.lappsgrid.org/ns/media/text#space-separated"; 
+       public static final String STRING_LIST = "http://vocab.lappsgrid.org/ns/string-list"; 
        public static final String SYSTEM = "http://vocab.lappsgrid.org/ns/system"; 
        public static final String LOGIN = "http://vocab.lappsgrid.org/ns/system#login"; 
        public static final String AUTHORIZATION = "http://vocab.lappsgrid.org/ns/system#authorization"; 
        public static final String ONE_PER_LINE = "http://vocab.lappsgrid.org/ns/media/text#newline-separated"; 
        public static final String TSV = "http://vocab.lappsgrid.org/ns/media/text#tab-separated"; 
        public static final String CSV = "http://vocab.lappsgrid.org/ns/media/text#comma-separated"; 
+       public static final String SPACE_SEPARATED = "http://vocab.lappsgrid.org/ns/media/text#space-separated"; 
        public static final String DOCUMENT = "http://vocab.lappsgrid.org/Document"; 
        public static final String GATE = "http://vocab.lappsgrid.org/ns/media/xml#gate"; 
        public static final String UIMA = "http://vocab.lappsgrid.org/ns/media/xml#uima-cas"; 
