@@ -1,6 +1,12 @@
 org.lappsgrid.discriminator
 ===========================
 
+## Build Status
+
+master[![Master Status](https://travis-ci.org/lapps/org.lappsgrid.discriminator.svg?branch=master)](https://travis-ci.org/lapps/org.lappsgrid.discriminator)
+develop[![Develop Status](https://travis-ci.org/lapps/org.lappsgrid.discriminator.svg?branch=develop)](https://travis-ci.org/lapps/org.lappsgrid.discriminator)
+feature[![Feature Status](https://travis-ci.org/lapps/org.lappsgrid.discriminator.svg?branch=feature%2Fv2.0.0)](https://travis-ci.org/lapps/org.lappsgrid.discriminator)
+
 The `org.lappsgrid.discriminator` package provides an inventory of the URI used by
 LAPPS services.
 
