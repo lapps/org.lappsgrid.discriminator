@@ -8,6 +8,7 @@ meta  http://vocab.lappsgrid.org/ns/meta
 text  http://vocab.lappsgrid.org/ns/media/text
 xml  http://vocab.lappsgrid.org/ns/media/xml
 string-list text http://vocab.lappsgrid.org/ns/string-list
+deprecated  http://vocab.lappsgrid.org/ns/deprecated
 
 128: system  http://vocab.lappsgrid.org/ns/system
 login system http://vocab.lappsgrid.org/ns/system#login
@@ -36,7 +37,7 @@ paragraph chunk http://vocab.lappsgrid.org/Paragraph
 sentence chunk http://vocab.lappsgrid.org/Sentence
 token chunk http://vocab.lappsgrid.org/Token
 pos annotation http://vocab.lappsgrid.org/Token#pos
-coref annotation http://vocab.lappsgrid.org/NamedEntity#matches
+coref annotation http://vocab.lappsgrid.org/Coreference
 ne annotation http://vocab.lappsgrid.org/NamedEntity
 person ne http://vocab.lappsgrid.org/Person
 location ne http://vocab.lappsgrid.org/Location
@@ -48,20 +49,20 @@ lemma annotation http://vocab.lappsgrid.org/Token#lemma
 lookup annotation http://vocab.lappsgrid.org/Lookup
 matches annotation http://vocab.lappsgrid.org/NamedEntity#matches
 
-3072: query  http://vocab.lappsgrid.org/ns/query
-get  http://vocab.lappsgrid.org/ns/get
-index  http://vocab.lappsgrid.org/ns/index
-list  http://vocab.lappsgrid.org/ns/list
-lucene query http://vocab.lappsgrid.org/ns/query#lucene
-sql query http://vocab.lappsgrid.org/ns/query#sql
-sparql query http://vocab.lappsgrid.org/ns/query#sparql
-regex query http://vocab.lappsgrid.org/ns/query#regex
-composite query http://vocab.lappsgrid.org/ns/query#composite
-size query http://vocab.lappsgrid.org/ns/size
-getMetadata query http://vocab.lappsgrid.org/ns/get-metadata
-execute query http://vocab.lappsgrid.org/ns/execute
-solr query http://vocab.lappsgrid.org/ns/query#solr
-schema solr http://vocab.lappsgrid.org/ns/query#solr-schema
+3072: query  http://vocab.lappsgrid.org/ns/action/query
+get  http://vocab.lappsgrid.org/ns/action/get
+index  http://vocab.lappsgrid.org/ns/action/index
+list  http://vocab.lappsgrid.org/ns/action/list
+lucene query http://vocab.lappsgrid.org/ns/action/query#lucene
+sql query http://vocab.lappsgrid.org/ns/action/query#sql
+sparql query http://vocab.lappsgrid.org/ns/action/query#sparql
+regex query http://vocab.lappsgrid.org/ns/action/query#regex
+composite query http://vocab.lappsgrid.org/ns/action/query#composite
+size query http://vocab.lappsgrid.org/ns/action/size
+getMetadata deprecated http://vocab.lappsgrid.org/ns/action/get-metadata
+execute query http://vocab.lappsgrid.org/ns/action/execute
+solr query http://vocab.lappsgrid.org/ns/action/query#solr
+schema solr http://vocab.lappsgrid.org/ns/action/query#solr-schema
 
 524287: license  http://vocab.lappsgrid.org/ns/license
 public-domain license http://vocab.lappsgrid.org/ns/license#public-domain
