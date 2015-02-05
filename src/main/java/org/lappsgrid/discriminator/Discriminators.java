@@ -10,7 +10,7 @@ package org.lappsgrid.discriminator;
 
 public class Discriminators
 {
-    private Discriminators() { }
+    protected Discriminators() { }
 
     public static class Values
     {
