@@ -15,6 +15,8 @@ class TypesTest {
     /** The bit mask for public static final fields. */
     public static final int PSF = PUBLIC | STATIC | FINAL
 
+    // Returns true if the field is public static final and of the
+    // required type.
     def test = { Class<?> type, Field field ->
         return (PSF == (field.modifiers & PSF)) && field.type == type
     }
@@ -24,33 +26,14 @@ class TypesTest {
         println "TypesTest.testURI"
         def uriTest = test.curry(String.class)
 //        def fields = Uri.getDeclaredFields().findAll {uriTest it}
-        def fields = Constants.Uri.getDeclaredFields().findAll { uriTest it }
+        def fields = Discriminators.Uri.getDeclaredFields().findAll { uriTest it }
 
         fields.each { uriField ->
             String uri = uriField.get(null)
             // Get the corresponding fields from the Types class
 //            Field typesField = Types.getDeclaredField(uriField.name)
-            Field typesField = Constants.Values.getDeclaredField(uriField.name)
+            Field typesField = Discriminators.Values.getDeclaredField(uriField.name)
             long type = typesField.get(null);
-            String shortName = DiscriminatorRegistry.get(type)
-            assertTrue uri == DiscriminatorRegistry.getUri(type)
-            assertTrue uri == DiscriminatorRegistry.getUri(shortName)
-        }
-        println "Passed."
-    }
-
-    @Test
-    void testTypes() {
-        println "TypesTest.testTypes"
-        def uriTest = test.curry(Long.class)
-        def fields = org.lappsgrid.discriminator.Types.getDeclaredFields().findAll {uriTest it}
-
-        fields.each { typesField ->
-            Long type = typesField.get(null)
-            // Get the corresponding fields from the Uri class
-//            Field uriField = Uri.getDeclaredField(typesField.name)
-            Field uriField = Constants.Uri.getField(typesField.name)
-            String uri = uriField.get(null);
             String shortName = DiscriminatorRegistry.get(type)
             assertTrue uri == DiscriminatorRegistry.getUri(type)
             assertTrue uri == DiscriminatorRegistry.getUri(shortName)
