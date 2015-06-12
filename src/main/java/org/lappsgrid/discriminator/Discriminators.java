@@ -27,7 +27,7 @@ package org.lappsgrid.discriminator;
 
 public class Discriminators
 {
-    protected Discriminators() { }
+    private Discriminators() { }
 
     public static class Values
     {
@@ -55,6 +55,7 @@ public class Discriminators
        public static final long PTB = 1030;
        public static final long JSON = 1031;
        public static final long JSON_LD = 1032;
+       public static final long LIF = 1033;
        public static final long LAPPS = 1034;
        public static final long ANNOTATION = 2048;
        public static final long CHUNK = 2049;
@@ -148,6 +149,7 @@ public class Discriminators
        public static final String PTB = "http://vocab.lappsgrid.org/ns/media/text#ptb"; 
        public static final String JSON = "http://vocab.lappsgrid.org/ns/media/json"; 
        public static final String JSON_LD = "http://vocab.lappsgrid.org/ns/media/jsonld"; 
+       public static final String LIF = "http://vocab.lappsgrid.org/ns/media/jsonld#lif"; 
        public static final String LAPPS = "http://vocab.lappsgrid.org/ns/media/jsonld#lif"; 
        public static final String ANNOTATION = "http://vocab.lappsgrid.org/Annotation"; 
        public static final String CHUNK = "http://vocab.lappsgrid.org/Chunk"; 
