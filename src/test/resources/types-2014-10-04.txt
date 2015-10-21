@@ -3,7 +3,7 @@
 2 meta  http://vocab.lappsgrid.org/ns/meta
 3 text  http://vocab.lappsgrid.org/ns/media/text
 4 xml  http://vocab.lappsgrid.org/ns/media/xml
-5 string-list  http://vocab.lappsgrid.org/ns/media/text#space-separated
+5 string-list text  http://vocab.lappsgrid.org/ns/string-list
 512 one-per-line text http://vocab.lappsgrid.org/ns/media/text#newline-separated
 513 tsv text http://vocab.lappsgrid.org/ns/media/text#tab-separated
 514 csv text http://vocab.lappsgrid.org/ns/media/text#comma-separated
@@ -23,7 +23,7 @@
 2051 sentence chunk http://vocab.lappsgrid.org/Sentence
 2052 token chunk http://vocab.lappsgrid.org/Token
 2053 pos annotation http://vocab.lappsgrid.org/Token#pos
-2054 coref annotation http://vocab.lappsgrid.org/NamedEntity#matches
+2054 coref annotation http://vocab.lappsgrid.org/Coreference
 2055 ne annotation http://vocab.lappsgrid.org/NamedEntity
 2056 person ne http://vocab.lappsgrid.org/Person
 2057 location ne http://vocab.lappsgrid.org/Location

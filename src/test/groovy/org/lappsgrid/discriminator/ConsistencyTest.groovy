@@ -26,7 +26,7 @@ import static org.junit.Assert.*
  * 
  * @author Keith Suderman
  */
-@Ignore
+//@Ignore
 class ConsistencyTest {
 
     void runTest(String filename) {
@@ -99,7 +99,7 @@ class ConsistencyTest {
         println "Done"
     }
 
-    @Test
+    @Ignore
     void test2014_10_04() {
         println "ConsistencyTest.test2014_10_04"
         ClassLoader loader = ConsistencyTest.class.classLoader;
@@ -130,7 +130,7 @@ class ConsistencyTest {
 //                assertTrue expected.containsAll(ancestors)
             }
             else {
-                assertTrue discriminator.ancestors.isEmpty()
+                assertTrue "${discriminator.name} has ancenstors", discriminator.ancestors.isEmpty()
             }
             String message = "${line}\nExpected ${parts[-1]} Found ${discriminator.uri}"
             assertTrue message, normalize(parts[-1]) == normalize(discriminator.uri)
