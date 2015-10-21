@@ -1,0 +1,94 @@
+0 error  http://vocab.lappsgrid.org/ns/error
+1 ok  http://vocab.lappsgrid.org/ns/ok
+2 meta  http://vocab.lappsgrid.org/ns/meta
+3 text  http://vocab.lappsgrid.org/ns/media/text
+4 xml  http://vocab.lappsgrid.org/ns/media/xml
+5 string-list text http://vocab.lappsgrid.org/ns/string-list
+6 deprecated  http://vocab.lappsgrid.org/ns/deprecated
+128 system  http://vocab.lappsgrid.org/ns/system
+129 login system http://vocab.lappsgrid.org/ns/system#login
+130 authorization system http://vocab.lappsgrid.org/ns/system#authorization
+512 one-per-line text http://vocab.lappsgrid.org/ns/media/text#newline-separated
+513 tsv text http://vocab.lappsgrid.org/ns/media/text#tab-separated
+514 csv text http://vocab.lappsgrid.org/ns/media/text#comma-separated
+515 space-separated  http://vocab.lappsgrid.org/ns/media/text#space-separated
+1024 document  http://vocab.lappsgrid.org/Document
+1025 gate document xml http://vocab.lappsgrid.org/ns/media/xml#gate
+1026 uima document xml http://vocab.lappsgrid.org/ns/media/xml#uima-cas
+1027 stanford one-per-line document http://vocab.lappsgrid.org/ns/media/text#stanford
+1028 opennlp one-per-line document http://vocab.lappsgrid.org/ns/media/text#opennlp
+1029 graf document xml http://vocab.lappsgrid.org/ns/media/xml#graf-standoff
+1030 ptb document http://vocab.lappsgrid.org/ns/media/text#ptb
+1031 json document http://vocab.lappsgrid.org/ns/media/json
+1032 json-ld json http://vocab.lappsgrid.org/ns/media/jsonld
+1033 lif json-ld http://vocab.lappsgrid.org/ns/media/jsonld#lif
+1034 lapps json-ld http://vocab.lappsgrid.org/ns/media/jsonld#lif
+1035 ldc document xml http://vocab.lappsgrid.org/ns/media/xml#ldc
+2048 annotation  http://vocab.lappsgrid.org/Annotation
+2049 chunk annotation http://vocab.lappsgrid.org/Chunk
+2050 paragraph chunk http://vocab.lappsgrid.org/Paragraph
+2051 sentence chunk http://vocab.lappsgrid.org/Sentence
+2052 token chunk http://vocab.lappsgrid.org/Token
+2053 pos annotation http://vocab.lappsgrid.org/Token#pos
+2054 coref annotation http://vocab.lappsgrid.org/Coreference
+2055 ne annotation http://vocab.lappsgrid.org/NamedEntity
+2056 person ne http://vocab.lappsgrid.org/Person
+2057 location ne http://vocab.lappsgrid.org/Location
+2058 date ne http://vocab.lappsgrid.org/Date
+2059 organization ne http://vocab.lappsgrid.org/Organization
+2060 nchunk chunk http://vocab.lappsgrid.org/NounChunk
+2061 vchunk chunk http://vocab.lappsgrid.org/VerbChunk
+2062 lemma annotation http://vocab.lappsgrid.org/Token#lemma
+2063 lookup annotation http://vocab.lappsgrid.org/Lookup
+2064 matches annotation http://vocab.lappsgrid.org/NamedEntity#matches
+2065 markable annotation http://vocab.lappsgrid.org/Markable
+2066 dendency-structure annotation http://vocab.lappsgrid.org/DependencyStructure
+2067 phrase-structure annotation http://vocab.lappsgrid.org/PhraseStructure
+2068 constituent annotation http://vocab.lappsgrid.org/Constituent
+2069 dependency annotation http://vocab.lappsgrid.org/Dependency
+3072 query  http://vocab.lappsgrid.org/ns/action/query
+3073 get  http://vocab.lappsgrid.org/ns/action/get
+3074 index  http://vocab.lappsgrid.org/ns/action/index
+3075 list  http://vocab.lappsgrid.org/ns/action/list
+3076 lucene query http://vocab.lappsgrid.org/ns/action/query#lucene
+3077 sql query http://vocab.lappsgrid.org/ns/action/query#sql
+3078 sparql query http://vocab.lappsgrid.org/ns/action/query#sparql
+3079 regex query http://vocab.lappsgrid.org/ns/action/query#regex
+3080 composite query http://vocab.lappsgrid.org/ns/action/query#composite
+3081 size query http://vocab.lappsgrid.org/ns/action/size
+3082 getMetadata deprecated http://vocab.lappsgrid.org/ns/action/get-metadata
+3083 execute query http://vocab.lappsgrid.org/ns/action/execute
+3084 solr query http://vocab.lappsgrid.org/ns/action/query#solr
+3085 schema solr http://vocab.lappsgrid.org/ns/action/query#solr-schema
+524287 license  http://vocab.lappsgrid.org/ns/license
+524288 public-domain license http://vocab.lappsgrid.org/ns/license#public-domain
+524289 open-source license http://vocab.lappsgrid.org/ns/license#open-source
+524290 apache2 open-source http://vocab.lappsgrid.org/ns/license#apache-2.0
+524291 gpl open-source http://vocab.lappsgrid.org/ns/license#gpl
+524292 lgpl open-source http://vocab.lappsgrid.org/ns/license#lgpl
+524293 bsd open-source http://vocab.lappsgrid.org/ns/license#bsd
+524294 eclipse open-source http://vocab.lappsgrid.org/ns/license#eclipse
+524295 no-commercial license http://vocab.lappsgrid.org/ns/license#non-commercial
+524296 restricted license http://vocab.lappsgrid.org/ns/license#restricted
+524297 gpl2 gpl http://vocab.lappsgrid.org/ns/license#gpl-2.0
+524298 gpl3 gpl http://vocab.lappsgrid.org/ns/license#gpl-3.0
+524299 lgpl21 lgpl http://vocab.lappsgrid.org/ns/license#lgpl-2.1
+524300 lgpl3 lgpl http://vocab.lappsgrid.org/ns/license#lgpl-3.0
+524301 bsd2 bsd http://vocab.lappsgrid.org/ns/license#bsd-2-clause
+524302 bsd3 bsd http://vocab.lappsgrid.org/ns/license#bsd-3-clause
+524303 mit open-source http://vocab.lappsgrid.org/ns/license#mit
+524304 cc license http://vocab.lappsgrid.org/ns/license#cc
+524305 cc0 cc http://vocab.lappsgrid.org/ns/license#cc0
+524306 cc-by cc http://vocab.lappsgrid.org/ns/license#cc-by
+524307 cc-by-sa cc-by http://vocab.lappsgrid.org/ns/license#cc-by-sa
+524308 cc-by-nd cc-by http://vocab.lappsgrid.org/ns/license#cc-by-nd
+524309 cc-by-nc cc-by http://vocab.lappsgrid.org/ns/license#cc-by-nc
+524310 cc-by-nc-sa cc-by-nc cc-by-sa http://vocab.lappsgrid.org/ns/license#cc-by-nc-sa
+524311 cc-by-nc-nd cc-by-nc cc-by-nd http://vocab.lappsgrid.org/ns/license#cc-by-nc-nd
+525311 usage  http://vocab.lappsgrid.org/ns/allow
+525312 research usage http://vocab.lappsgrid.org/ns/allow#research
+525313 commercial usage http://vocab.lappsgrid.org/ns/allow#commercial
+525314 education usage http://vocab.lappsgrid.org/ns/allow#education
+525315 non-profit usage http://vocab.lappsgrid.org/ns/allow#non-profit
+525316 personal usage http://vocab.lappsgrid.org/ns/allow#personal
+525317 any commercial non-profit education research personal http://vocab.lappsgrid.org/ns/allow#any

@@ -139,7 +139,7 @@ public class Discriminators
        public static final String JSON = "http://vocab.lappsgrid.org/ns/media/json"; 
        public static final String JSON_LD = "http://vocab.lappsgrid.org/ns/media/jsonld"; 
        public static final String LIF = "http://vocab.lappsgrid.org/ns/media/jsonld#lif"; 
-       public static final String LAPPS = "http://vocab.lappsgrid.org/ns/media/jsonld#lif"; 
+       public static final String LAPPS = "http://vocab.lappsgrid.org/ns/media/jsonld#lif";
        public static final String LDC = "http://vocab.lappsgrid.org/ns/media/xml#ldc"; 
        public static final String ANNOTATION = "http://vocab.lappsgrid.org/Annotation"; 
        public static final String CHUNK = "http://vocab.lappsgrid.org/Chunk"; 
@@ -162,8 +162,8 @@ public class Discriminators
        public static final String DENDENCY_STRUCTURE = "http://vocab.lappsgrid.org/DependencyStructure"; 
        public static final String PHRASE_STRUCTURE = "http://vocab.lappsgrid.org/PhraseStructure"; 
        public static final String CONSTITUENT = "http://vocab.lappsgrid.org/Constituent"; 
-       public static final String DEPENDENCY = "http://vocab.lappsgrid.org/Dependency"; 
-       public static final String QUERY = "http://vocab.lappsgrid.org/ns/action/query"; 
+       public static final String DEPENDENCY = "http://vocab.lappsgrid.org/Dependency";
+       public static final String QUERY = "http://vocab.lappsgrid.org/ns/action/query";
        public static final String GET = "http://vocab.lappsgrid.org/ns/action/get"; 
        public static final String INDEX = "http://vocab.lappsgrid.org/ns/action/index"; 
        public static final String LIST = "http://vocab.lappsgrid.org/ns/action/list"; 
