@@ -26,7 +26,7 @@ import static org.junit.Assert.*
  * 
  * @author Keith Suderman
  */
-@Ignore
+//@Ignore
 class ConsistencyTest {
 
     void runTest(String filename) {
@@ -54,13 +54,52 @@ class ConsistencyTest {
     }
 
     @Test
+    void test2015_10_21() {
+        println "ConsistencyTest.test2015_10_21"
+        ClassLoader loader = ConsistencyTest.class.classLoader;
+        String types = loader.getResource('types-2015-10-21.txt')?.text
+        assertNotNull types
+        types.eachLine { line ->
+            String[] parts = line.split("\\s+");
+            long id = Long.parseLong(parts[0])
+            Discriminator discriminator = DiscriminatorRegistry.getByType(id)
+            assertTrue discriminator.name == parts[1]
+
+            int index = 2
+            if (parts.length > 3) {
+                List<String> expected = parts[2..-2] as List<String>
+                int expectedSize = expected.size()
+                int actualSize = discriminator.ancestors.size()
+                assertTrue "expected ${expectedSize} found ${actualSize}", expectedSize == actualSize
+                List<String> found = discriminator.ancestors.collect { it.name }
+                if (!expected.containsAll(found)) {
+                    println "Assertion failed on: " + line
+                    println "Expected"
+                    println expected.join(', ')
+                    println "Found"
+                    println found.join(', ')
+                    fail()
+                }
+//                assertTrue ancestors.containsAll(expected)
+//                assertTrue expected.containsAll(ancestors)
+            }
+            else {
+                assertTrue discriminator.ancestors.isEmpty()
+            }
+            String message = "${line}\nExpected ${parts[-1]} Found ${discriminator.uri}"
+            assertTrue message, normalize(parts[-1]) == normalize(discriminator.uri)
+        }
+        println "Done"
+    }
+
+    @Test
     void test2014_06_11() {
         println "ConsistencyTest.test2014_06_11"
         runTest("types-2014-06-11.txt")
         println "Done"
     }
 
-    @Test
+    @Ignore
     void test2014_10_04() {
         println "ConsistencyTest.test2014_10_04"
         ClassLoader loader = ConsistencyTest.class.classLoader;
@@ -91,7 +130,7 @@ class ConsistencyTest {
 //                assertTrue expected.containsAll(ancestors)
             }
             else {
-                assertTrue discriminator.ancestors.isEmpty()
+                assertTrue "${discriminator.name} has ancenstors", discriminator.ancestors.isEmpty()
             }
             String message = "${line}\nExpected ${parts[-1]} Found ${discriminator.uri}"
             assertTrue message, normalize(parts[-1]) == normalize(discriminator.uri)

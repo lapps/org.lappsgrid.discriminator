@@ -29,7 +29,9 @@ ptb document http://vocab.lappsgrid.org/ns/media/text#ptb
 json document http://vocab.lappsgrid.org/ns/media/json
 json-ld json http://vocab.lappsgrid.org/ns/media/jsonld
 lif json-ld http://vocab.lappsgrid.org/ns/media/jsonld#lif
-lapps json-ld http://vocab.lappsgrid.org/ns/media/jsonld#lif
+
+1034: lapps json-ld http://vocab.lappsgrid.org/ns/media/jsonld#lif
+ldc document xml http://vocab.lappsgrid.org/ns/media/xml#ldc
 
 2048: annotation  http://vocab.lappsgrid.org/Annotation
 chunk annotation http://vocab.lappsgrid.org/Chunk
@@ -48,6 +50,11 @@ vchunk chunk http://vocab.lappsgrid.org/VerbChunk
 lemma annotation http://vocab.lappsgrid.org/Token#lemma
 lookup annotation http://vocab.lappsgrid.org/Lookup
 matches annotation http://vocab.lappsgrid.org/NamedEntity#matches
+markable annotation http://vocab.lappsgrid.org/Markable
+dendency-structure annotation http://vocab.lappsgrid.org/DependencyStructure
+phrase-structure annotation http://vocab.lappsgrid.org/PhraseStructure
+constituent annotation http://vocab.lappsgrid.org/Constituent
+dependency annotation http://vocab.lappsgrid.org/Dependency
 
 3072: query  http://vocab.lappsgrid.org/ns/action/query
 get  http://vocab.lappsgrid.org/ns/action/get
