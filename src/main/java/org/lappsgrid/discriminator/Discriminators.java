@@ -4,6 +4,8 @@
  *
  * This file is machine generated and any changes are likely to be overwritten
  * by future updates.
+ *
+ * Copyright 2015 The Language Application Grid.
  */
 
 package org.lappsgrid.discriminator;
@@ -59,7 +61,7 @@ public class Discriminators
        public static final long LOOKUP = 2063;
        public static final long MATCHES = 2064;
        public static final long MARKABLE = 2065;
-       public static final long DENDENCY_STRUCTURE = 2066;
+       public static final long DEPENDENCY_STRUCTURE = 2066;
        public static final long PHRASE_STRUCTURE = 2067;
        public static final long CONSTITUENT = 2068;
        public static final long DEPENDENCY = 2069;
@@ -112,6 +114,106 @@ public class Discriminators
 
     }
 
+    public static class Alias
+    {
+
+       public static final String ERROR = "error";
+       public static final String OK = "ok";
+       public static final String META = "meta";
+       public static final String TEXT = "text";
+       public static final String XML = "xml";
+       public static final String STRING_LIST = "string-list";
+       public static final String DEPRECATED = "deprecated";
+       public static final String SYSTEM = "system";
+       public static final String LOGIN = "login";
+       public static final String AUTHORIZATION = "authorization";
+       public static final String ONE_PER_LINE = "one-per-line";
+       public static final String TSV = "tsv";
+       public static final String CSV = "csv";
+       public static final String SPACE_SEPARATED = "space-separated";
+       public static final String DOCUMENT = "document";
+       public static final String GATE = "gate";
+       public static final String UIMA = "uima";
+       public static final String STANFORD = "stanford";
+       public static final String OPENNLP = "opennlp";
+       public static final String GRAF = "graf";
+       public static final String PTB = "ptb";
+       public static final String JSON = "json";
+       public static final String JSON_LD = "json-ld";
+       public static final String LIF = "lif";
+       public static final String LAPPS = "lapps";
+       public static final String LDC = "ldc";
+       public static final String ANNOTATION = "annotation";
+       public static final String CHUNK = "chunk";
+       public static final String PARAGRAPH = "paragraph";
+       public static final String SENTENCE = "sentence";
+       public static final String TOKEN = "token";
+       public static final String POS = "pos";
+       public static final String COREF = "coref";
+       public static final String NE = "ne";
+       public static final String PERSON = "person";
+       public static final String LOCATION = "location";
+       public static final String DATE = "date";
+       public static final String ORGANIZATION = "organization";
+       public static final String NCHUNK = "nchunk";
+       public static final String VCHUNK = "vchunk";
+       public static final String LEMMA = "lemma";
+       public static final String LOOKUP = "lookup";
+       public static final String MATCHES = "matches";
+       public static final String MARKABLE = "markable";
+       public static final String DEPENDENCY_STRUCTURE = "dependency-structure";
+       public static final String PHRASE_STRUCTURE = "phrase-structure";
+       public static final String CONSTITUENT = "constituent";
+       public static final String DEPENDENCY = "dependency";
+       public static final String QUERY = "query";
+       public static final String GET = "get";
+       public static final String INDEX = "index";
+       public static final String LIST = "list";
+       public static final String LUCENE = "lucene";
+       public static final String SQL = "sql";
+       public static final String SPARQL = "sparql";
+       public static final String REGEX = "regex";
+       public static final String COMPOSITE = "composite";
+       public static final String SIZE = "size";
+       public static final String GETMETADATA = "getMetadata";
+       public static final String EXECUTE = "execute";
+       public static final String SOLR = "solr";
+       public static final String SCHEMA = "schema";
+       public static final String LICENSE = "license";
+       public static final String PUBLIC_DOMAIN = "public-domain";
+       public static final String OPEN_SOURCE = "open-source";
+       public static final String APACHE2 = "apache2";
+       public static final String GPL = "gpl";
+       public static final String LGPL = "lgpl";
+       public static final String BSD = "bsd";
+       public static final String ECLIPSE = "eclipse";
+       public static final String NO_COMMERCIAL = "no-commercial";
+       public static final String RESTRICTED = "restricted";
+       public static final String GPL2 = "gpl2";
+       public static final String GPL3 = "gpl3";
+       public static final String LGPL21 = "lgpl21";
+       public static final String LGPL3 = "lgpl3";
+       public static final String BSD2 = "bsd2";
+       public static final String BSD3 = "bsd3";
+       public static final String MIT = "mit";
+       public static final String CC = "cc";
+       public static final String CC0 = "cc0";
+       public static final String CC_BY = "cc-by";
+       public static final String CC_BY_SA = "cc-by-sa";
+       public static final String CC_BY_ND = "cc-by-nd";
+       public static final String CC_BY_NC = "cc-by-nc";
+       public static final String CC_BY_NC_SA = "cc-by-nc-sa";
+       public static final String CC_BY_NC_ND = "cc-by-nc-nd";
+       public static final String USAGE = "usage";
+       public static final String RESEARCH = "research";
+       public static final String COMMERCIAL = "commercial";
+       public static final String EDUCATION = "education";
+       public static final String NON_PROFIT = "non-profit";
+       public static final String PERSONAL = "personal";
+       public static final String ANY = "any";
+
+    }
+
     public static class Uri
     {
 
@@ -139,7 +241,7 @@ public class Discriminators
        public static final String JSON = "http://vocab.lappsgrid.org/ns/media/json"; 
        public static final String JSON_LD = "http://vocab.lappsgrid.org/ns/media/jsonld"; 
        public static final String LIF = "http://vocab.lappsgrid.org/ns/media/jsonld#lif"; 
-       public static final String LAPPS = "http://vocab.lappsgrid.org/ns/media/jsonld#lif";
+       public static final String LAPPS = "http://vocab.lappsgrid.org/ns/media/jsonld#lif"; 
        public static final String LDC = "http://vocab.lappsgrid.org/ns/media/xml#ldc"; 
        public static final String ANNOTATION = "http://vocab.lappsgrid.org/Annotation"; 
        public static final String CHUNK = "http://vocab.lappsgrid.org/Chunk"; 
@@ -159,11 +261,11 @@ public class Discriminators
        public static final String LOOKUP = "http://vocab.lappsgrid.org/Lookup"; 
        public static final String MATCHES = "http://vocab.lappsgrid.org/NamedEntity#matches"; 
        public static final String MARKABLE = "http://vocab.lappsgrid.org/Markable"; 
-       public static final String DENDENCY_STRUCTURE = "http://vocab.lappsgrid.org/DependencyStructure"; 
+       public static final String DEPENDENCY_STRUCTURE = "http://vocab.lappsgrid.org/DependencyStructure"; 
        public static final String PHRASE_STRUCTURE = "http://vocab.lappsgrid.org/PhraseStructure"; 
        public static final String CONSTITUENT = "http://vocab.lappsgrid.org/Constituent"; 
-       public static final String DEPENDENCY = "http://vocab.lappsgrid.org/Dependency";
-       public static final String QUERY = "http://vocab.lappsgrid.org/ns/action/query";
+       public static final String DEPENDENCY = "http://vocab.lappsgrid.org/Dependency"; 
+       public static final String QUERY = "http://vocab.lappsgrid.org/ns/action/query"; 
        public static final String GET = "http://vocab.lappsgrid.org/ns/action/get"; 
        public static final String INDEX = "http://vocab.lappsgrid.org/ns/action/index"; 
        public static final String LIST = "http://vocab.lappsgrid.org/ns/action/list"; 
