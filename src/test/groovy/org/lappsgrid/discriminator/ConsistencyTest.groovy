@@ -57,13 +57,13 @@ class ConsistencyTest {
     void test2015_10_21() {
         println "ConsistencyTest.test2015_10_21"
         ClassLoader loader = ConsistencyTest.class.classLoader;
-        String types = loader.getResource('types-2015-10-21.txt')?.text
+        String types = loader.getResource('./types-2015-10-21.txt')?.text
         assertNotNull types
         types.eachLine { line ->
             String[] parts = line.split("\\s+");
             long id = Long.parseLong(parts[0])
             Discriminator discriminator = DiscriminatorRegistry.getByType(id)
-            assertTrue discriminator.name == parts[1]
+            assertTrue "Expected ${discriminator.name} Found: ${parts[1]}", discriminator.name == parts[1]
 
             int index = 2
             if (parts.length > 3) {
