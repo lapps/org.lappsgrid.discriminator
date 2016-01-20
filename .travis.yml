@@ -1,6 +1,19 @@
 language: java
 branches:
-    only:
-        - master
-        - develop
-        - feature/v2.0.0
+  only:
+  - master
+  - develop
+env:
+  global:
+  - secure: Ywy2IraS62jLLwJGSfBok7Ro2HmOzzDifHENsZzeWfEJaXaQfjr/o8f2Kk3fZOftYNyKbrOAlsQ4V1D6+WpDZB0ZRFU2LQJl3ahHUo+SyQpVw6YkOx3rUgWkKWw5AlpiZBpWrKCG0aGiAsrpkeVeMM5eruQJ+cILqlqKGNf63Qw=
+  - secure: OfAB56fxiIPObCmGBgt1qYVz/alz6E0abTO4OnLvma8nYUhVKlXNb/N+jlocf/8h8uU2tC8FNVC5DjlrEkeJsGvjzqHiEaDEkp25+aWAfxseNNdq+j/VpWDlnB4faoXPwVYGX70Xblkx8UOKpz2zaYJeEx6aVFaHB8UXst4xR9Q=
+  - secure: iNJgyGj0m2areimyLHG8MZzj44ulUXoEutpQQ3PwHKjjTBPf2JmSJL+DtlxWEu2rkJWCouS2Gr3H9Ry984GAR1YG0THWg4yjIv3yNes8bwaIcacn+7rB1MeAUDWgcQ2UMBPZbTqWhqPuqk1iFBR7Nj0EI37JH5eQauMljgRB7ws=
+  - secure: Sh3UrNnJ8z9XoedbSQZuMdqsfI9poIsQdJwV50BglM4HNQkvjXjgpMR7rbl/jdPsB7BJf/6Thi8Z0W4t8H1RaQtpjmuBpLOsXb40/mUc/Xh/UyEsqLKLYa6XRG4u2E/Rsfmv/OtZH+UiGfluqiIf1BZu9XK8o+z7sLnKY77rjSc=
+  - secure: P5/R42s0/DfZ/X5J/Ero7PxNcCzfQmHGwgCcCQ2/wa2Z9y9P0kKoXvcvUnJOzeMynQTm7MlhoJZKsSiSRarEuki2+xI50AMgkW2vs6dRU5DQAFZIEnBvGsq5EKNSmWIHN9+4pUOMiW226vwFT0gqcKlozKgq1bgsOa6sDvaMJDo=
+  - secure: b0858TkKVOrIPDsKln28BmUEmqEIUvAIZNygAWqcy9wWjoZZZdYB/ekqjcg7MkGm872l3Aa+ujdUZjAVX8mSDTNynlclg2HTV14E+eY3zcwxFSK1knu9TzTAtUBhrFxX7HJrLwWZqhibiR2RMZflAe5ztTaNbTmByr/+v9Q9HbM=
+before_install:
+- chmod a+x ./deploy.sh
+script:
+- mvn clean test --settings settings.xml
+after_success:
+- if [ "$TRAVIS_BRANCH" == "master" ] ; then ./deploy.sh ; fi
