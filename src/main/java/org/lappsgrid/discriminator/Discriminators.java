@@ -67,6 +67,7 @@ public class Discriminators
        public static final long CONSTITUENT = 2069;
        public static final long DEPENDENCY = 2070;
        public static final long SEMANTIC_ROLE = 2071;
+       public static final long GENERIC_RELATION = 2072;
        public static final long QUERY = 3072;
        public static final long GET = 3073;
        public static final long INDEX = 3074;
@@ -169,6 +170,7 @@ public class Discriminators
        public static final String CONSTITUENT = "constituent";
        public static final String DEPENDENCY = "dependency";
        public static final String SEMANTIC_ROLE = "semantic-role";
+       public static final String GENERIC_RELATION = "generic-relation";
        public static final String QUERY = "query";
        public static final String GET = "get";
        public static final String INDEX = "index";
@@ -271,6 +273,7 @@ public class Discriminators
        public static final String CONSTITUENT = "http://vocab.lappsgrid.org/Constituent"; 
        public static final String DEPENDENCY = "http://vocab.lappsgrid.org/Dependency"; 
        public static final String SEMANTIC_ROLE = "http://vocab.lappsgrid.org/SemanticRole"; 
+       public static final String GENERIC_RELATION = "http://vocab.lappsgrid.org/GenericRelation"; 
        public static final String QUERY = "http://vocab.lappsgrid.org/ns/action/query"; 
        public static final String GET = "http://vocab.lappsgrid.org/ns/action/get"; 
        public static final String INDEX = "http://vocab.lappsgrid.org/ns/action/index"; 
