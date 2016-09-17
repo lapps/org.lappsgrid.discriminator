@@ -52,8 +52,11 @@ matches annotation http://vocab.lappsgrid.org/NamedEntity#matches
 markable annotation http://vocab.lappsgrid.org/Markable
 dependency-structure annotation http://vocab.lappsgrid.org/DependencyStructure
 phrase-structure annotation http://vocab.lappsgrid.org/PhraseStructure
-constituent annotation http://vocab.lappsgrid.org/Constituent
-dependency annotation http://vocab.lappsgrid.org/Dependency
+relation annotation http://vocab.lappsgrid.org/Relation
+constituent relation http://vocab.lappsgrid.org/Constituent
+dependency relation http://vocab.lappsgrid.org/Dependency
+semantic-role relation http://vocab.lappsgrid.org/SemanticRole
+generic-relation relation http://vocab.lappsgrid.org/GenericRelation
 
 3072: query  http://vocab.lappsgrid.org/ns/action/query
 get  http://vocab.lappsgrid.org/ns/action/get
