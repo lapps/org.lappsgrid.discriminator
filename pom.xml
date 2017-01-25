@@ -25,7 +25,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.lappsgrid</groupId>
 	<artifactId>discriminator</artifactId>
-    <version>2.3.0</version>
+    <version>2.3.1</version>
 	<name>Discriminator Registry</name>
 	<description>The Source Of All Knowledge for LAPPS discriminators</description>
     <url>https://github.com/lapps/org.lappsgrid.discriminator</url>
@@ -104,11 +104,13 @@
             <version>${groovy.version}</version>
             <scope>test</scope>
         </dependency>
+        <!--
         <dependency>
             <groupId>org.spockframework</groupId>
             <artifactId>spock-core</artifactId>
             <version>${spock.version}</version>
             <scope>test</scope>
         </dependency>
+        -->
     </dependencies>
 </project>
