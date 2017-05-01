@@ -14,6 +14,10 @@ public class Discriminators
 {
     private Discriminators() { }
 
+    /**
+     * @deprecated These are no longer reliable. Use an Alias or Uri instead.
+     */
+    @Deprecated
     public static class Values
     {
 
@@ -24,96 +28,100 @@ public class Discriminators
        public static final long XML = 4;
        public static final long STRING_LIST = 5;
        public static final long DEPRECATED = 6;
-       public static final long SYSTEM = 128;
-       public static final long LOGIN = 129;
-       public static final long AUTHORIZATION = 130;
-       public static final long ONE_PER_LINE = 512;
-       public static final long TSV = 513;
-       public static final long CSV = 514;
-       public static final long SPACE_SEPARATED = 515;
-       public static final long DOCUMENT = 1024;
-       public static final long GATE = 1025;
-       public static final long UIMA = 1026;
-       public static final long STANFORD = 1027;
-       public static final long OPENNLP = 1028;
-       public static final long GRAF = 1029;
-       public static final long PTB = 1030;
-       public static final long JSON = 1031;
-       public static final long JSON_LD = 1032;
-       public static final long LIF = 1033;
-       public static final long LAPPS = 1034;
-       public static final long LDC = 1035;
-       public static final long ANNOTATION = 2048;
-       public static final long CHUNK = 2049;
-       public static final long PARAGRAPH = 2050;
-       public static final long SENTENCE = 2051;
-       public static final long TOKEN = 2052;
-       public static final long POS = 2053;
-       public static final long COREF = 2054;
-       public static final long NE = 2055;
-       public static final long PERSON = 2056;
-       public static final long LOCATION = 2057;
-       public static final long DATE = 2058;
-       public static final long ORGANIZATION = 2059;
-       public static final long NCHUNK = 2060;
-       public static final long VCHUNK = 2061;
-       public static final long LEMMA = 2062;
-       public static final long LOOKUP = 2063;
-       public static final long MATCHES = 2064;
-       public static final long MARKABLE = 2065;
-       public static final long DEPENDENCY_STRUCTURE = 2066;
-       public static final long PHRASE_STRUCTURE = 2067;
-       public static final long RELATION = 2068;
-       public static final long CONSTITUENT = 2069;
-       public static final long DEPENDENCY = 2070;
-       public static final long SEMANTIC_ROLE = 2071;
-       public static final long GENERIC_RELATION = 2072;
-       public static final long QUERY = 3072;
-       public static final long GET = 3073;
-       public static final long INDEX = 3074;
-       public static final long LIST = 3075;
-       public static final long LUCENE = 3076;
-       public static final long SQL = 3077;
-       public static final long SPARQL = 3078;
-       public static final long REGEX = 3079;
-       public static final long COMPOSITE = 3080;
-       public static final long SIZE = 3081;
-       public static final long GETMETADATA = 3082;
-       public static final long EXECUTE = 3083;
-       public static final long SOLR = 3084;
-       public static final long SCHEMA = 3085;
-       public static final long LICENSE = 524287;
-       public static final long PUBLIC_DOMAIN = 524288;
-       public static final long OPEN_SOURCE = 524289;
-       public static final long APACHE2 = 524290;
-       public static final long GPL = 524291;
-       public static final long LGPL = 524292;
-       public static final long BSD = 524293;
-       public static final long ECLIPSE = 524294;
-       public static final long NO_COMMERCIAL = 524295;
-       public static final long RESTRICTED = 524296;
-       public static final long GPL2 = 524297;
-       public static final long GPL3 = 524298;
-       public static final long LGPL21 = 524299;
-       public static final long LGPL3 = 524300;
-       public static final long BSD2 = 524301;
-       public static final long BSD3 = 524302;
-       public static final long MIT = 524303;
-       public static final long CC = 524304;
-       public static final long CC0 = 524305;
-       public static final long CC_BY = 524306;
-       public static final long CC_BY_SA = 524307;
-       public static final long CC_BY_ND = 524308;
-       public static final long CC_BY_NC = 524309;
-       public static final long CC_BY_NC_SA = 524310;
-       public static final long CC_BY_NC_ND = 524311;
-       public static final long USAGE = 525311;
-       public static final long RESEARCH = 525312;
-       public static final long COMMERCIAL = 525313;
-       public static final long EDUCATION = 525314;
-       public static final long NON_PROFIT = 525315;
-       public static final long PERSONAL = 525316;
-       public static final long ANY = 525317;
+       public static final long SYSTEM = 7;
+       public static final long LOGIN = 8;
+       public static final long AUTHORIZATION = 9;
+       public static final long ONE_PER_LINE = 10;
+       public static final long TSV = 11;
+       public static final long CSV = 12;
+       public static final long SPACE_SEPARATED = 13;
+       public static final long GATE = 14;
+       public static final long UIMA = 15;
+       public static final long STANFORD = 16;
+       public static final long OPENNLP = 17;
+       public static final long GRAF = 18;
+       public static final long PTB = 19;
+       public static final long JSON = 20;
+       public static final long JSON_LD = 21;
+       public static final long LIF = 22;
+       public static final long LAPPS = 23;
+       public static final long LDC = 24;
+       public static final long ANNOTATION = 25;
+       public static final long CHUNK = 26;
+       public static final long PARAGRAPH = 27;
+       public static final long SENTENCE = 28;
+       public static final long TOKEN = 29;
+       public static final long POS = 30;
+       public static final long COREF = 31;
+       public static final long NE = 32;
+       public static final long PERSON = 33;
+       public static final long LOCATION = 34;
+       public static final long DATE = 35;
+       public static final long ORGANIZATION = 36;
+       public static final long NCHUNK = 37;
+       public static final long VCHUNK = 38;
+       public static final long LEMMA = 39;
+       public static final long LOOKUP = 40;
+       public static final long MATCHES = 41;
+       public static final long MARKABLE = 42;
+       public static final long DEPENDENCY_STRUCTURE = 43;
+       public static final long PHRASE_STRUCTURE = 44;
+       public static final long CONSTITUENT = 45;
+       public static final long DEPENDENCY = 46;
+       public static final long THING = 47;
+       public static final long REGION = 48;
+       public static final long RELATION = 49;
+       public static final long GENERIC_RELATION = 50;
+       public static final long SEMANTIC_ROLE = 51;
+       public static final long DOCUMENT = 52;
+       public static final long TEXT_DOCUMENT = 53;
+       public static final long AUDIO_DOCUMENT = 54;
+       public static final long QUERY = 55;
+       public static final long GET = 56;
+       public static final long INDEX = 57;
+       public static final long LIST = 58;
+       public static final long LUCENE = 59;
+       public static final long SQL = 60;
+       public static final long SPARQL = 61;
+       public static final long REGEX = 62;
+       public static final long COMPOSITE = 63;
+       public static final long SIZE = 64;
+       public static final long GETMETADATA = 65;
+       public static final long EXECUTE = 66;
+       public static final long SOLR = 67;
+       public static final long SOLR_SCHEMA = 68;
+       public static final long LICENSE = 69;
+       public static final long PUBLIC_DOMAIN = 70;
+       public static final long OPEN_SOURCE = 71;
+       public static final long APACHE2 = 72;
+       public static final long GPL = 73;
+       public static final long LGPL = 74;
+       public static final long BSD = 75;
+       public static final long ECLIPSE = 76;
+       public static final long NO_COMMERCIAL = 77;
+       public static final long RESTRICTED = 78;
+       public static final long GPL2 = 79;
+       public static final long GPL3 = 80;
+       public static final long LGPL21 = 81;
+       public static final long LGPL3 = 82;
+       public static final long BSD2 = 83;
+       public static final long BSD3 = 84;
+       public static final long MIT = 85;
+       public static final long CC = 86;
+       public static final long CC0 = 87;
+       public static final long CC_BY = 88;
+       public static final long CC_BY_SA = 89;
+       public static final long CC_BY_ND = 90;
+       public static final long CC_BY_NC = 91;
+       public static final long CC_BY_NC_SA = 92;
+       public static final long CC_BY_NC_ND = 93;
+       public static final long USAGE = 94;
+       public static final long RESEARCH = 95;
+       public static final long COMMERCIAL = 96;
+       public static final long EDUCATION = 97;
+       public static final long NON_PROFIT = 98;
+       public static final long PERSONAL = 99;
+       public static final long ALL = 100;
 
     }
 
@@ -134,7 +142,6 @@ public class Discriminators
        public static final String TSV = "tsv";
        public static final String CSV = "csv";
        public static final String SPACE_SEPARATED = "space-separated";
-       public static final String DOCUMENT = "document";
        public static final String GATE = "gate";
        public static final String UIMA = "uima";
        public static final String STANFORD = "stanford";
@@ -166,11 +173,16 @@ public class Discriminators
        public static final String MARKABLE = "markable";
        public static final String DEPENDENCY_STRUCTURE = "dependency-structure";
        public static final String PHRASE_STRUCTURE = "phrase-structure";
-       public static final String RELATION = "relation";
        public static final String CONSTITUENT = "constituent";
        public static final String DEPENDENCY = "dependency";
-       public static final String SEMANTIC_ROLE = "semantic-role";
+       public static final String THING = "thing";
+       public static final String REGION = "region";
+       public static final String RELATION = "relation";
        public static final String GENERIC_RELATION = "generic-relation";
+       public static final String SEMANTIC_ROLE = "semantic-role";
+       public static final String DOCUMENT = "document";
+       public static final String TEXT_DOCUMENT = "text-document";
+       public static final String AUDIO_DOCUMENT = "audio-document";
        public static final String QUERY = "query";
        public static final String GET = "get";
        public static final String INDEX = "index";
@@ -184,7 +196,7 @@ public class Discriminators
        public static final String GETMETADATA = "getMetadata";
        public static final String EXECUTE = "execute";
        public static final String SOLR = "solr";
-       public static final String SCHEMA = "schema";
+       public static final String SOLR_SCHEMA = "solr-schema";
        public static final String LICENSE = "license";
        public static final String PUBLIC_DOMAIN = "public-domain";
        public static final String OPEN_SOURCE = "open-source";
@@ -216,7 +228,7 @@ public class Discriminators
        public static final String EDUCATION = "education";
        public static final String NON_PROFIT = "non-profit";
        public static final String PERSONAL = "personal";
-       public static final String ANY = "any";
+       public static final String ALL = "all";
 
     }
 
@@ -237,7 +249,6 @@ public class Discriminators
        public static final String TSV = "http://vocab.lappsgrid.org/ns/media/text#tab-separated"; 
        public static final String CSV = "http://vocab.lappsgrid.org/ns/media/text#comma-separated"; 
        public static final String SPACE_SEPARATED = "http://vocab.lappsgrid.org/ns/media/text#space-separated"; 
-       public static final String DOCUMENT = "http://vocab.lappsgrid.org/Document"; 
        public static final String GATE = "http://vocab.lappsgrid.org/ns/media/xml#gate"; 
        public static final String UIMA = "http://vocab.lappsgrid.org/ns/media/xml#uima-cas"; 
        public static final String STANFORD = "http://vocab.lappsgrid.org/ns/media/text#stanford"; 
@@ -265,15 +276,20 @@ public class Discriminators
        public static final String VCHUNK = "http://vocab.lappsgrid.org/VerbChunk"; 
        public static final String LEMMA = "http://vocab.lappsgrid.org/Token#lemma"; 
        public static final String LOOKUP = "http://vocab.lappsgrid.org/Lookup"; 
-       public static final String MATCHES = "http://vocab.lappsgrid.org/NamedEntity#matches"; 
+       public static final String MATCHES = "http://vocab.lappsgrid.org/Matches"; 
        public static final String MARKABLE = "http://vocab.lappsgrid.org/Markable"; 
        public static final String DEPENDENCY_STRUCTURE = "http://vocab.lappsgrid.org/DependencyStructure"; 
        public static final String PHRASE_STRUCTURE = "http://vocab.lappsgrid.org/PhraseStructure"; 
-       public static final String RELATION = "http://vocab.lappsgrid.org/Relation"; 
        public static final String CONSTITUENT = "http://vocab.lappsgrid.org/Constituent"; 
        public static final String DEPENDENCY = "http://vocab.lappsgrid.org/Dependency"; 
-       public static final String SEMANTIC_ROLE = "http://vocab.lappsgrid.org/SemanticRole"; 
+       public static final String THING = "http://vocab.lappsgrid.org/Thing"; 
+       public static final String REGION = "http://vocab.lappsgrid.org/Region"; 
+       public static final String RELATION = "http://vocab.lappsgrid.org/Relation"; 
        public static final String GENERIC_RELATION = "http://vocab.lappsgrid.org/GenericRelation"; 
+       public static final String SEMANTIC_ROLE = "http://vocab.lappsgrid.org/SemanticRole"; 
+       public static final String DOCUMENT = "http://vocab.lappsgrid.org/Document"; 
+       public static final String TEXT_DOCUMENT = "http://vocab.lappsgrid.org/TextDocument"; 
+       public static final String AUDIO_DOCUMENT = "http://vocab.lappsgrid.org/AudioDocument"; 
        public static final String QUERY = "http://vocab.lappsgrid.org/ns/action/query"; 
        public static final String GET = "http://vocab.lappsgrid.org/ns/action/get"; 
        public static final String INDEX = "http://vocab.lappsgrid.org/ns/action/index"; 
@@ -287,7 +303,7 @@ public class Discriminators
        public static final String GETMETADATA = "http://vocab.lappsgrid.org/ns/action/get-metadata"; 
        public static final String EXECUTE = "http://vocab.lappsgrid.org/ns/action/execute"; 
        public static final String SOLR = "http://vocab.lappsgrid.org/ns/action/query#solr"; 
-       public static final String SCHEMA = "http://vocab.lappsgrid.org/ns/action/query#solr-schema"; 
+       public static final String SOLR_SCHEMA = "http://vocab.lappsgrid.org/ns/action/query#solr-schema"; 
        public static final String LICENSE = "http://vocab.lappsgrid.org/ns/license"; 
        public static final String PUBLIC_DOMAIN = "http://vocab.lappsgrid.org/ns/license#public-domain"; 
        public static final String OPEN_SOURCE = "http://vocab.lappsgrid.org/ns/license#open-source"; 
@@ -319,7 +335,7 @@ public class Discriminators
        public static final String EDUCATION = "http://vocab.lappsgrid.org/ns/allow#education"; 
        public static final String NON_PROFIT = "http://vocab.lappsgrid.org/ns/allow#non-profit"; 
        public static final String PERSONAL = "http://vocab.lappsgrid.org/ns/allow#personal"; 
-       public static final String ANY = "http://vocab.lappsgrid.org/ns/allow#any"; 
+       public static final String ALL = "http://vocab.lappsgrid.org/ns/allow#any"; 
 
     }
 }

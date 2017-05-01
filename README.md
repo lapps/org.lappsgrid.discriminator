@@ -17,6 +17,6 @@ The primary purpose of this module is to provide classes with `static final` def
 <dependency>
 	<groupId>org.lappsgrid</groupId>
 	<artifactId>discriminator</artifactId>
-	<version>2.1.0</version>
+	<version>2.3.1</version>
 </dependency>
 ```
