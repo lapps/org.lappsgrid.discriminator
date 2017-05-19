@@ -27,6 +27,7 @@ import static java.lang.reflect.Modifier.*
 /**
  * @author Keith Suderman
  */
+@Ignore
 class TypesTest {
 
     /** The bit mask for public static final fields. */
@@ -52,8 +53,8 @@ class TypesTest {
             Field typesField = Discriminators.Values.getDeclaredField(uriField.name)
             long type = typesField.get(null);
             String shortName = DiscriminatorRegistry.get(type)
-            assertTrue uri == DiscriminatorRegistry.getUri(type)
-            assertTrue uri == DiscriminatorRegistry.getUri(shortName)
+            assert uri == DiscriminatorRegistry.getUri(type)
+            assert uri == DiscriminatorRegistry.getUri(shortName)
         }
         println "Passed."
     }
@@ -68,7 +69,7 @@ class TypesTest {
 
     @Ignore
     void printAllURI() {
-        Uri.getDeclaredFields().findAll { it.type == String }.each {
+        Discriminators.Uri.getDeclaredFields().findAll { it.type == String }.each {
             println it.get(null)
         }
     }
