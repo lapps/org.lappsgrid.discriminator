@@ -23,10 +23,12 @@ import static org.junit.Assert.*
 
 /**
  * Ensures discriminator ID values have not changed.
- * 
+ * <p>
+ * The removal of ID values for discriminators have made all of these tests invalid.
+ * <p>
  * @author Keith Suderman
  */
-//@Ignore
+@Ignore
 class ConsistencyTest {
 
     void runTest(String filename) {
