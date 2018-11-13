@@ -20,6 +20,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.lang.reflect.Field;
 import java.net.*;
 import java.net.URI;
 import java.util.*;
@@ -117,7 +118,7 @@ public class DiscriminatorRegistry
       Discriminator d = nameIndex.get(name);
       if (d == null)
       {
-         return null;
+         return getUriByReflection(name);
       }
       return d.getUri();
    }
@@ -133,7 +134,21 @@ public class DiscriminatorRegistry
 
    }
 
-
+   static public String getUriByReflection(String name) {
+      name = name.toUpperCase().replaceAll("-", "_");
+      Field field = null;
+      Object value = null;
+      try
+      {
+         field = Discriminators.Uri.class.getField(name);
+         value = field.get(null);
+      }
+      catch (NoSuchFieldException | IllegalAccessException e)
+      {
+         return null;
+      }
+      return value.toString();
+   }
 
    /**
     * The <code>register</code> methods should only be used during
