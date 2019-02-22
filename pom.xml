@@ -46,7 +46,6 @@
         <system>GitHub issues</system>
     </issueManagement>
     <properties>
-        <lapps.api.version>2.0.1</lapps.api.version>
         <javadoc.opts>-Xdoclint:none</javadoc.opts>
     </properties>
     <build>
