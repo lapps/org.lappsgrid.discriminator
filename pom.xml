@@ -73,6 +73,11 @@
             <artifactId>api</artifactId>
             <version>${lapps.api.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy-xml</artifactId>
+            <version>${groovy.version}</version>
+        </dependency>
     </dependencies>
     <reporting>
         <plugins>
