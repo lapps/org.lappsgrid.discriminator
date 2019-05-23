@@ -20,7 +20,7 @@
 	<parent>
 		<artifactId>groovy-parent-pom</artifactId>
 		<groupId>org.lappsgrid.maven</groupId>
-		<version>1.1.0</version>
+		<version>1.1.1</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.lappsgrid</groupId>
@@ -47,6 +47,7 @@
     </issueManagement>
     <properties>
         <javadoc.opts>-Xdoclint:none</javadoc.opts>
+        <lapps.api.version>2.0.1</lapps.api.version>
     </properties>
     <build>
         <pluginManagement>
