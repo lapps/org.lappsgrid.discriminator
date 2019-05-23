@@ -47,6 +47,7 @@
     </issueManagement>
     <properties>
         <javadoc.opts>-Xdoclint:none</javadoc.opts>
+        <lapps.api.version>2.0.1</lapps.api.version>
     </properties>
     <build>
         <pluginManagement>
