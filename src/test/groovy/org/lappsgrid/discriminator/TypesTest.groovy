@@ -23,6 +23,7 @@ import java.lang.reflect.Field
 
 import static org.junit.Assert.*
 import static java.lang.reflect.Modifier.*
+import static org.lappsgrid.discriminator.Discriminators.Uri
 
 /**
  * @author Keith Suderman
@@ -57,6 +58,29 @@ class TypesTest {
             assert uri == DiscriminatorRegistry.getUri(shortName)
         }
         println "Passed."
+    }
+
+    @Test
+    void byName() {
+        Discriminator discriminator = DiscriminatorRegistry.getByName("lif")
+        assert null != discriminator.uri
+        assert Uri.LIF == discriminator.uri
+
+        discriminator = DiscriminatorRegistry.getByName("gate")
+        assert null != discriminator
+        assert Uri.GATE == discriminator.uri
+
+        DiscriminatorRegistry.names().each { String name ->
+            discriminator = DiscriminatorRegistry.getByName(name)
+            assert discriminator != null
+            assert name == discriminator.name
+
+            String d2 = DiscriminatorRegistry.getUriByReflection(name)
+            if (discriminator.uri != d2) {
+                //TODO this should cause the test to fail.
+                println "WARNING: duplicate short name values: $name for ${discriminator.uri} and $d2"
+            }
+        }
     }
 
     @Test
