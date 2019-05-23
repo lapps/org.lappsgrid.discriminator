@@ -30,7 +30,7 @@ import org.lappsgrid.discriminator.core.DiscriminatorImpl;
 
 /**
  * The DiscriminatorRegistry serves as the source of all
- * knowledge for {@link Discriminator} objects.
+ * knowledge for Discriminator objects.
  * <p>
  * The DiscriminatorRegistry class is used to map between a Discriminator's
  * integer identifier, its short name, and its URI.
