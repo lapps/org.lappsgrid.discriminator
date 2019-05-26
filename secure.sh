@@ -6,7 +6,7 @@
 source $HOME/.passphrases
 
 KEYS="GH_USER GH_PASS SONATYPE_USERNAME SONATYPE_PASSWORD PGP_PASSPHRASE ENCRYPTION_PASSWORD"
-REPO=lapps/org.lappsgrid.discriminator
+REPO=$(git remote get-url origin | cut -d: -f2 | sed 's/.git//')
 
 function encrypt() {
 	name=$1
@@ -15,6 +15,7 @@ function encrypt() {
 	travis encrypt -r $REPO $name=\"$value\" --add
 }
 
+echo "Encoding keys for the repository $REPO"
 for key in $KEYS; do
 	encrypt $key
 done
