@@ -1,36 +1,38 @@
 language: java
 branches:
   only:
-    - develop
-    - master
-    - release/.*
+  - develop
+  - master
+  - release/.*
 env:
   global:
-    - secure: HfZI1W6f5zgvtFfkayzhdj1/vE3EnuGuofOpeSeVDgkeSck0/q7XrS0TNVAog1A3hslldKzBRyqbUcMeDMfgcCtxVKw5ZrCyCGiVvMBT0bOSvjMnY2bWPMUQuzKJFO/N01fA/4Y+Tt2vW6JnRIVdc/Optkh4zAc/i+FoZA+J0oU=
-    - secure: DOUs1WBUrVFdhtiIp6rhWfFTjnWn2Q70gNlBO2U6RuPrMauGdvtlHH6WZqNnowbSi1ABKj0rrgOn5LkW727uXwY2OFia8zwNyKlzY3gy/PkdFCeKDai+yWpi9+MCSNLAh+s/orwRBs5BfVXkSvd1EftpZ2QgR7/yNYewJIpNz9w=
-    - secure: fAXZgb6PJ5hAGvcq/HCSu5ZCHCHHefTem49RZ0xK4RPlJq5jsv1c/V3CPL40FrXXSWzkq53rAMAebELx2Wb1KFk01iJZQs/sEnul4Om2nnhDLbtCucNeLsTlr3ngewQt3aggVxKGB0cd0V+Ju8Iha2Sbb9rpR6rDcG3srcutkEc=
-    - secure: dSxn+xLVq/AM3xWvV4w7VYfHWNuGDOlipI3GwTqLlryUIL/EB6inqQQQzYK/b6V7ihpRS5hsWeDX3tFSgX6tq7mX1D3nDTznA4v/KFFziTv2QPm840eISPFWyqVUXB/fIx7+kkyaqEjy6/BqxIwTyQCgjcrM/41i/68bYsHVOgE=
-    - secure: GUy10JFNYXT0xHtK3Jbdqtb8gI21AoHRGUgIi2O8xxu0r+LmG3CdONwanjQMyfOD7l8t2PIqtr49Gi0YeOmmzlFaWi4NSYnVDp1sXy/2h9nO20dqUnwU3t480l0YEiX5/iqTPHIpnpJX5M9+3cK2GY0cCqL/O9Xo5ncLBvjA83c=
-    - secure: PzYTdsse1ipmjI30xaxyu5/K5nwUelDBH6JzCnZqQ4tAXAbY3E5tnlKS9G14SbqGc0Wwjjt1eGllJn6SjyARASIYue4qTfVlL5IuWdSjp63ynEEazFs9RShGHbogN3y3AekunPRkZ96Z89SDEzU0c6uqsSOMuvCTGPtmpBLHOgA=
-
+  - secure: agAaZTHnQ3FHdJbhg8nqpxF/5TmcyIcj30GyQnpK0EZH/ODLs9Gpc8r5TopWVTb+71uegGOuMbV5Fy/yeogaZdZVcxXfs2LmDIHYXw1fKZAKIsE1eDQUI6pq5a2NPdqcuqp+QNrKFVzJA42YqnR3QSmQwAC9GJZXabut12ALozk=
+  - secure: QR1r8pW902uazOrctuhnZj2f2Pap1/+U4nl8Wp3fN4r6uXhAp3wRIV/zFf43dXWbSV0/60GNYbNfo+ZSOxpkpVaXtcuvAWV2RcEPGJsZ/aF88p0uz0TcZetX5Gp9oBqwR0D2cfJZD8OYvHnfd2w6xCap2UprWDieYNfsLCNKsio=
+  - secure: AWT4RHmLRsySUyxAIylekEsTIWdfH/byDGRKQuLqh0/1KA1Qp5ArDWgymlhfe8rzUXVwcieAYG2NVpKQhUluF7ErN+xvDypfIdUVb/wpo8sYbOMmoZusQrFCQ+K1q9a4BCOJOjAyOeUO0vpQtAo550pngVsbaWHZdoB91yJ1Bg4=
+  - secure: kQl3isqpvZdhQv2QEJwo0OdTO3TC/76Ci/QUF4S6Pwmz8cH7pitC8YIA50G7myHVm8ot/1MpLyv9lr00LYt+RSjKUzakshDeEX4+Xhqr7OzFSNNEv+YkwuZkKyGSn7ts+qnhq8wSNXyxVnAlAOBVZZlaCPxNDVR1QCKROibTBJs=
+  - secure: ZISAU9VH0ik9lFDdFYZNR698v8z6aR4oRkFdzgZYn4ZgS2RIgqh+mn4j+OeHt9z//nv1QN+fsFvESZyfIkKYG0YJHJikDjjoGAdMrp5PA0BIUIQkFWYqcOLFkyQtcAblUIYIYy6IIul03VxJ8HJpY8MSr5USsK02bIgzyL1hoi0=
+  - secure: KFAI1o9F7WHO3Smaq+hT1/Gae/QhXeB+PsEbzM9RvGhWQMqQyTaFbe8en5mZfB6nDHO0dE/sEeLjDqG0ivOW55fs4zkyh1XT45hUrP32zlCG0EI1oEyGmExkz9o9uVmCJyGKXnv208DuHQjuBcJkJCYRJH4OY/m2/QoAEOW9dKM=
 stages:
-  - name: Unit Tests
-    if: branch = develop
-  - name: Staging
-    if: branch =~ ^release
-  - name: Master
-    if: branch = master
-
+- name: Unit Tests
+  if: branch = develop
+- name: Staging
+  if: branch =~ ^release
+- name: Master
+  if: branch = master
 jobs:
   include:
-    - stage: Unit Tests
-      install: mvn --settings settings.xml -DskipTests=true -Dmaven.javadoc.skip=true -Pdevelop -B -V install
-      script: mvn --settings settings.xml -Pdevelop clean test
-    - stage: Staging
-      before-install: chmod +x ./deploy.sh
-      install: mvn --settings settings.xml -DskipTests=true -Dmaven.javadoc.skip=true -Pstaging -B -V install
-      script: mvn --settings settings.xml -Dmaven.javadoc.skip=true -Pstaging -B -V clean test
-      after_success: ./deploy.sh
-    - stage: Master
-      install: mvn --settings settings.xml -DskipTests=true -Dmaven.javadoc.skip=true -B -V install
-      script: mvn --settings settings.xml clean test
+  - stage: Unit Tests
+    install: mvn --settings settings.xml -DskipTests=true -Dmaven.javadoc.skip=true
+      -Pdevelop -B -V install
+    script: mvn --settings settings.xml -Pdevelop clean test
+  - stage: Staging
+    before-install: chmod +x ./deploy.sh
+    install: mvn --settings settings.xml -DskipTests=true -Dmaven.javadoc.skip=true
+      -Pstaging -B -V install
+    script: mvn --settings settings.xml -Dmaven.javadoc.skip=true -Pstaging -B -V
+      clean test
+    after_success: "./deploy.sh"
+  - stage: Master
+    install: mvn --settings settings.xml -DskipTests=true -Dmaven.javadoc.skip=true
+      -B -V install
+    script: mvn --settings settings.xml clean test site
